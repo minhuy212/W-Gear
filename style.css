@@ -1343,14 +1343,39 @@ header {
     display: none;
 }
 
-.container__wrapper-blogs {
-    padding: 70px 0;
-    /* height: 650px; */
+.container__wrapper-about-us {
+    min-height: 600px;
     background-color: #d377f780;
 }
 
-.container__wrapper-blogs h4 {
+.container__wrapper-about-box {
+    width: 100%;
+    padding: 70px 0;
+}
+
+.container__wrapper-about-heading h4,
+.container__wrapper-email-register h4 {
     color: #000;
+}
+
+
+.container__wrapper-about-content {
+    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+}
+
+.container__wrapper-about-content p {
+    font-size: 20px;
+    text-align: justify;
+    text-indent: 50px;
+    margin-top: 25px;
+    font-style: italic;
+}
+
+.container__wrapper-blogs {
+    padding: 70px 0;
+    /* height: 650px; */
 }
 
 .container__wrapper-blog ul {
@@ -1410,6 +1435,7 @@ header {
     /* background-color: #2ecc71; */
     text-align: center;
     padding: 70px 0;
+    background-color: #d377f780;
 }
 
 .container__wrapper-email-form {
