@@ -13,203 +13,779 @@
     <title>Bàn phím W-GEAR</title>
 </head>
 <body>
-    <header class="header">
-        <nav class="grid header__nav">
-            <div class="header__brand">
-                <a href="index.html" class="header__logo">W<i class="header__logo-icon fa-solid fa-gamepad"></i>Gear</a>  
-                <span>&copy;</span>
-            </div>
+    <div class="main">
+        <header class="header">
+            <nav class="grid header__nav">
+                <div class="header__brand">
+                    <a href="index.html" class="header__logo">W<i class="header__logo-icon fa-solid fa-gamepad"></i>Gear</a>  
+                    <span>&copy;</span>
+                </div>
+                    
+                <div class="header__items">
+                    <ul>
+                        <li class="header__item"><a href="index.html">Trang chủ</a></li>
+                        <li class="header__item"><a href="#"><i class="icon fas fa-keyboard"></i>  Bàn phím</a>
+                            <div class="header__subitem">
+                                <ul>
+                                    <li><a href="#">Bàn phím Akko</a></li>
+                                    <li><a href="#">Bàn phím iKBC</a></li>
+                                    <li><a href="#">Bàn phím DareU</a></li>
+                                    <li><a href="#">Bàn phím FL-Esport</a></li>
+                                    <li><a href="#">Bàn phím Leopold</a></li>
+                                    <li><a href="#">Bàn phím Razer</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header__item"><a href="#"><i class="icon fa fa-mouse"></i>  Chuột</a>
+                            <div class="header__subitem">
+                                <ul>
+                                    <li><a href="#">Chuột Logitech</a></li>
+                                    <li><a href="#">Chuột Steelseries</a></li>
+                                    <li><a href="#">Chuột Fuhlen</a></li>
+                                    <li><a href="#">Chuột Asus</a></li>
+                                    <li><a href="#">Chuột Razer</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header__item"><a href="#"><i class="icon fa fa-headphones"></i>  Tai nghe</a>
+                            <div class="header__subitem">
+                                <ul>
+                                    <li><a href="#">Tai nghe HyperX</a></li>
+                                    <li><a href="#">Tai nghe Logitech</a></li>
+                                    <li><a href="#">Tai nghe Rapoo</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header__item"><a href="#"><i class="icon fa fa-briefcase"></i>  Tuyển dụng</a></li>
+                        <li class="header__item"><a href="#"><i class="icon fa fa-headset"></i>  Tư vấn</a></li>
+                    </ul>
+                </div>
+    
+                <div class="header__search">
+                    <input type="text" class="input header__search--box" placeholder="Tìm kiếm sản phẩm">
+                    <a href="#" class="header__search--icon"><i class="icon search-icon fa fa-search"></i></a>
+                </div>
+    
+                <div class="header__toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>  
                 
-            <div class="header__items">
+                <div class="header__user"> 
+                    <!-- Log in active -->
+                    <div class="header__user--signin">
+                        <button class="btn btn--pri btn__login">LET'S BUY</button>
+                    </div>
+    
+                    <!-- Log out unactive -->
+                    <div class="header__user--container unactive">
+                        <div class="header__user-cart">
+                            <a href="#" class="header__user-cart--link">
+                                <i class="icon fa-solid fa-basket-shopping"></i>
+                                <span class="header__user-cart--quality">5</span>
+                            </a>
+                            <!-- Empty: header__user-cart-list--empty -->
+                            <div class="header__user-cart-list">
+                                <img src="./img/Cart/cart-list-empty.jpg" alt="" class="header__user-cart-empty-img">
+    
+                                <h4 class="header__cart-list--heading">Danh sách sản phẩm</h4>
+                                <ul class="header__cart-list-items">
+                                    <li class="header__cart-list-item">
+                                        <img src="./img/Produces/Keyboards/Akko/akko 3084 v2 ASA Blackpink.jpg" alt="Sản phẩm" class="header__cart-list-item-igm">
+    
+                                        <div class="header__cart-list-item-info"> 
+                                            <div class="header__cart-list-item-name-box">
+                                                <a href="#" class="header__cart-list-item-name">Bàn phím cơ AKKO 3084 v2 ASA – Black Pink</a>
+                                            </div>
+                                            <span class="header__cart-list-item-price product-price-sale">1,690,000đ</span>
+                                            <div class="header__cart-list-item-detail">
+                                                <span class="header__cart-list-item-detail-heading">Số lượng:</span>
+                                                <span class="header__cart-list-item-quality">1</span>
+                                            </div>
+                                        </div>
+    
+                                        <button class="btn btn--pri header__cart-list-item-remove">XÓA</button>
+                                    </li> 
+    
+                                    <li class="header__cart-list-item">
+                                        <img src="./img/Produces/Mouses/Logitech/Logitech G304 Lightspeed Wireless White.jpg" alt="Sản phẩm" class="header__cart-list-item-igm">
+    
+                                        <div class="header__cart-list-item-info"> 
+                                            <div class="header__cart-list-item-name-box">
+                                                <a href="#" class="header__cart-list-item-name">Chuột Logitech G304 Lightspeed Wireless White</a>
+                                            </div>
+                                            <span class="header__cart-list-item-price product-price-sale">849,000đ</span>
+                                            <div class="header__cart-list-item-detail">
+                                                <span class="header__cart-list-item-detail-heading">Số lượng:</span>
+                                                <span class="header__cart-list-item-quality">1</span>
+                                            </div>
+                                        </div>
+    
+                                        <button class="btn btn--pri header__cart-list-item-remove">XÓA</button>
+                                    </li> 
+    
+                                    <li class="header__cart-list-item">
+                                        <img src="./img/Produces/Keyboards/Leopold/Leopold FC650MDS Bluetooth Blue Grey.jpg" alt="Sản phẩm" class="header__cart-list-item-igm">
+    
+                                        <div class="header__cart-list-item-info"> 
+                                            <div class="header__cart-list-item-name-box">
+                                                <a href="#" class="header__cart-list-item-name">Bàn phím Leopold FC650MDS Bluetooth Blue Grey</a>
+                                            </div>
+                                            <span class="header__cart-list-item-price product-price-sale">2,970,000đ</span>
+                                            <div class="header__cart-list-item-detail">
+                                                <span class="header__cart-list-item-detail-heading">Số lượng:</span>
+                                                <span class="header__cart-list-item-quality">2</span>
+                                            </div>
+                                        </div>
+    
+                                        <button class="btn btn--pri header__cart-list-item-remove">XÓA</button>
+                                    </li> 
+    
+                                    <li class="header__cart-list-item">
+                                        <img src="./img/Produces/Headphones/HyperX/HyperX Cloud Stinger Gaming Black.jpg" alt="Sản phẩm" class="header__cart-list-item-igm">
+    
+                                        <div class="header__cart-list-item-info"> 
+                                            <div class="header__cart-list-item-name-box">
+                                                <a href="#" class="header__cart-list-item-name">Tai nghe HyperX Cloud Stinger Gaming Black</a>
+                                            </div>
+                                            <span class="header__cart-list-item-price product-price-sale">1,299,000đ</span>
+                                            <div class="header__cart-list-item-detail">
+                                                <span class="header__cart-list-item-detail-heading">Số lượng:</span>
+                                                <span class="header__cart-list-item-quality">1</span>
+                                            </div>
+                                        </div>
+    
+                                        <button class="btn btn--pri header__cart-list-item-remove">XÓA</button>
+                                    </li> 
+    
+                                    <li class="header__cart-list-item">
+                                        <img src="./img/Produces/Mouses/Asus/ASUS ROG Keris.jpg" alt="Sản phẩm" class="header__cart-list-item-igm">
+    
+                                        <div class="header__cart-list-item-info"> 
+                                            <div class="header__cart-list-item-name-box">
+                                                <a href="#" class="header__cart-list-item-name">Chuột ASUS ROG Keris</a>
+                                            </div>
+                                            <span class="header__cart-list-item-price product-price-sale">1,250,000đ</span>
+                                            <div class="header__cart-list-item-detail">
+                                                <span class="header__cart-list-item-detail-heading">Số lượng:</span>
+                                                <span class="header__cart-list-item-quality">3</span>
+                                            </div>
+                                        </div>
+    
+                                        <button class="btn btn--pri header__cart-list-item-remove">XÓA</button>
+                                    </li> 
+                                </ul>
+                                <div class="header__cart-list-see">
+                                    <button class="btn btn--pri header__cart-list-see-button">XEM GIỎ HÀNG</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="header__user--separate"></div>
+    
+                        <div class="header__user-account">
+                            <a href="#" class="header__user-account--link"><i class="icon fa-solid fa-user"></i></a>
+                            <div class="header__user-account-info">
+                                <div class="header__user-account-img">
+                                    <img src="./img/Account/avatar.jpg.jpg" alt="" class="header__user-account-avatar">
+                                </div>
+                                <span class="header__user-account-name">Nguyễn Minh Huy</span>
+                                <div class="header__user-account-info-details">
+                                    <div class="header__user-account-contact">
+                                        <span class="header__user-account-phone">Số điện thoại: 0938745593</span>
+                                    </div>
+                                    <div class="header__user-account-adress">
+                                        <span class="header__user-account-Email">Email: nguyenminhhuy.0938745593@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div class="header__user-account-button">
+                                    <button class="btn btn--pri header__user-account-edit">CHỈNH SỬA</button>
+                                    <button class="btn btn--sec header__user-account-signout">ĐĂNG XUẤT</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="grid container__wrapper">
+                <div class="container__wrapper-inner-heading container__wrapper-page-header">
+                    <h4>Trang chủ > Bàn phím</h4>
+                </div>
+
+                <div class="container__wrapper-sort-filter-price">
+                    <div class="container__wrapper-sort"> 
+                        <div class="container__wrapper-selection">
+                            <span>Sắp xếp</span>
+                            <select>
+                                <option value="1">Mới nhất</option>
+                                <option value="2">Bán chạy</option>
+                                <option value="3">Giá giảm dần</option>
+                                <option value="4"> Giá tăng dần</option> 
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="container__wrapper-filter">
+                        <div class="container__wrapper-selection">
+                            <span>Lọc hãng</span>
+                            <select>
+                                <option value="1">Tất cả</option>
+                                <option value="2">Akko</option>
+                                <option value="3">iKBC</option>
+                                <option value="4">FL-Esport</option>
+                                <option value="5">Leopold</option>
+                                <option value="6">Các hãng khác</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="container__wrapper-price"> 
+                        <div class="container__wrapper-filter-prices">
+                            <input type="text" placeholder="Tối thiểu 0đ" class="input">
+                            <input type="text" placeholder="Tối đa 20,000,000đ" class="input">
+                            <button class="btn btn--pri">Tìm kiếm</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container__wrapper-inner">   
+                    <div class="grid container__wrapper-products">  
+                        <ul class="container__wrapper-products-list Keyboards page">
+                            <li class="container__wrapper-product"> 
+                                    <div class="container__wrapper-product-img">
+                                        <div class="container__wrapper-product-overlay"></div>
+                                        <div class="container__wrapper-product-button-see">
+                                            <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
+                                        </div>
+                                        <img src="./img/Produces/Keyboards/Leopold/Leopold FC650MDS Bluetooth Blue Grey.jpg" alt="Sản phẩm">
+                                    </div>
+
+                                    <div class="container__wrapper-product-info">
+                                        <div class="container__wrapper-product-info-layout">
+                                            <div class="container__wrapper-product-name">
+                                                <span><a href="#" class="header__cart-list-item-name">Bàn phím cơ Leopold FC650MDS Bluetooth Blue Grey</a></span>
+                                            </div>
+                                            <div class="container__wrapper-product-prices">
+                                                <span class="container__wrapper-product-price-normal product-price-sale">2,970,000đ</span>
+                                            </div>
+                                            <div class="container__wrapper-product-button">
+                                                <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
+                                                <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
+                                            </div>
+                                        </div>
+                                    </div> 
+                            </li>
+
+                            <li class="container__wrapper-product"> 
+                                <div class="container__wrapper-product-img">
+                                    <div class="container__wrapper-product-overlay"></div>
+                                    <div class="container__wrapper-product-button-see">
+                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
+                                    </div>
+                                    <img src="./img/Produces/Keyboards/iKBC/iKBC CD108 PD.jpg" alt="Sản phẩm">
+                                </div>
+                                <div class="container__wrapper-product-info">
+                                    <div class="container__wrapper-product-info-layout">
+                                        <div class="container__wrapper-product-name">
+                                            <span><a href="#" class="header__cart-list-item-name">Bàn phím cơ iKBC CD108 PD Red switch</a></span>
+                                        </div>
+                                        <div class="container__wrapper-product-prices">
+                                            <span class="container__wrapper-product-price-normal product-price-sale">1,750,000đ</span>
+                                            <span class="container__wrapper-product-price-normal">1,980,000đ</span>
+                                        </div>
+                                        <div class="container__wrapper-product-button">
+                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
+                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </li>
+
+                            <li class="container__wrapper-product">
+                                <div class="container__wrapper-product-img">
+                                    <div class="container__wrapper-product-overlay"></div>
+                                    <div class="container__wrapper-product-button-see">
+                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
+                                    </div>
+                                    <img src="./img/Produces/Keyboards/Razer/Razer Blackwidow V3 Tenkeyless Yellow switch.jpg" alt="Sản phẩm">
+                                </div>
+                                <div class="container__wrapper-product-info">
+                                    <div class="container__wrapper-product-info-layout">
+                                        <div class="container__wrapper-product-name">
+                                            <span><a href="#" class="header__cart-list-item-name">Bàn phím cơ Razer Blackwidow V3 Tenkeyless</a></span>
+                                        </div>
+                                        <div class="container__wrapper-product-prices">
+                                            <span class="container__wrapper-product-price-normal product-price-sale">2,989,000đ</span>
+                                        </div>
+                                        <div class="container__wrapper-product-button">
+                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
+                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="container__wrapper-product">
+                                <div class="container__wrapper-product-img">
+                                    <div class="container__wrapper-product-overlay"></div>
+                                    <div class="container__wrapper-product-button-see">
+                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
+                                    </div>
+                                    <img src="./img/Produces/Keyboards/Akko/akko 3084 v2 ASA Blackpink.jpg" alt="Sản phẩm">
+                                </div>
+                                <div class="container__wrapper-product-info">
+                                    <div class="container__wrapper-product-info-layout">
+                                        <div class="container__wrapper-product-name">
+                                            <span><a href="#" class="header__cart-list-item-name">Bàn phím cơ AKKO 3084 v2 ASA – Black Pink</a></span>
+                                        </div>
+                                        <div class="container__wrapper-product-prices">
+                                            <span class="container__wrapper-product-price-normal product-price-sale">1,690,000đ</span>
+                                            <span class="container__wrapper-product-price-normal">1,750,000đ</span>
+                                        </div>
+                                        <div class="container__wrapper-product-button">
+                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
+                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="container__wrapper-product">
+                                <div class="container__wrapper-product-img">
+                                    <div class="container__wrapper-product-overlay"></div>
+                                    <div class="container__wrapper-product-button-see">
+                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
+                                    </div>
+                                    <img src="./img/Produces/Keyboards/Leopold/Leopold FC650MDS Bluetooth Blue Grey.jpg" alt="Sản phẩm">
+                                </div>
+                                <div class="container__wrapper-product-info">
+                                    <div class="container__wrapper-product-info-layout">
+                                        <div class="container__wrapper-product-name">
+                                            <span><a href="#" class="header__cart-list-item-name">Bàn phím cơ Leopold FC650MDS Bluetooth Blue Grey</a></span>
+                                        </div>
+                                        <div class="container__wrapper-product-prices">
+                                            <span class="container__wrapper-product-price-normal product-price-sale">2,970,000đ</span>
+                                        </div>
+                                        <div class="container__wrapper-product-button">
+                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
+                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="container__wrapper-product"> 
+                                <div class="container__wrapper-product-img">
+                                    <div class="container__wrapper-product-overlay"></div>
+                                    <div class="container__wrapper-product-button-see">
+                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
+                                    </div>
+                                    <img src="./img/Produces/Keyboards/Leopold/Leopold FC650MDS Bluetooth Blue Grey.jpg" alt="Sản phẩm">
+                                </div>
+
+                                <div class="container__wrapper-product-info">
+                                    <div class="container__wrapper-product-info-layout">
+                                        <div class="container__wrapper-product-name">
+                                            <span><a href="#" class="header__cart-list-item-name">Bàn phím cơ Leopold FC650MDS Bluetooth Blue Grey</a></span>
+                                        </div>
+                                        <div class="container__wrapper-product-prices">
+                                            <span class="container__wrapper-product-price-normal product-price-sale">2,970,000đ</span>
+                                        </div>
+                                        <div class="container__wrapper-product-button">
+                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
+                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </li>
+
+                            <li class="container__wrapper-product"> 
+                                <div class="container__wrapper-product-img">
+                                    <div class="container__wrapper-product-overlay"></div>
+                                    <div class="container__wrapper-product-button-see">
+                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
+                                    </div>
+                                    <img src="./img/Produces/Keyboards/iKBC/iKBC CD108 PD.jpg" alt="Sản phẩm">
+                                </div>
+                                <div class="container__wrapper-product-info">
+                                    <div class="container__wrapper-product-info-layout">
+                                        <div class="container__wrapper-product-name">
+                                            <span><a href="#" class="header__cart-list-item-name">Bàn phím cơ iKBC CD108 PD Red switch</a></span>
+                                        </div>
+                                        <div class="container__wrapper-product-prices">
+                                            <span class="container__wrapper-product-price-normal product-price-sale">1,750,000đ</span>
+                                            <span class="container__wrapper-product-price-normal">1,980,000đ</span>
+                                        </div>
+                                        <div class="container__wrapper-product-button">
+                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
+                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </li>
+
+                            <li class="container__wrapper-product">
+                                <div class="container__wrapper-product-img">
+                                    <div class="container__wrapper-product-overlay"></div>
+                                    <div class="container__wrapper-product-button-see">
+                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
+                                    </div>
+                                    <img src="./img/Produces/Keyboards/Razer/Razer Blackwidow V3 Tenkeyless Yellow switch.jpg" alt="Sản phẩm">
+                                </div>
+                                <div class="container__wrapper-product-info">
+                                    <div class="container__wrapper-product-info-layout">
+                                        <div class="container__wrapper-product-name">
+                                            <span><a href="#" class="header__cart-list-item-name">Bàn phím cơ Razer Blackwidow V3 Tenkeyless</a></span>
+                                        </div>
+                                        <div class="container__wrapper-product-prices">
+                                            <span class="container__wrapper-product-price-normal product-price-sale">2,989,000đ</span>
+                                        </div>
+                                        <div class="container__wrapper-product-button">
+                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
+                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="container__wrapper-product"> 
+                                <div class="container__wrapper-product-img">
+                                    <div class="container__wrapper-product-overlay"></div>
+                                    <div class="container__wrapper-product-button-see">
+                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
+                                    </div>
+                                    <img src="./img/Produces/Keyboards/Leopold/Leopold FC650MDS Bluetooth Blue Grey.jpg" alt="Sản phẩm">
+                                </div>
+
+                                <div class="container__wrapper-product-info">
+                                    <div class="container__wrapper-product-info-layout">
+                                        <div class="container__wrapper-product-name">
+                                            <span><a href="#" class="header__cart-list-item-name">Bàn phím cơ Leopold FC650MDS Bluetooth Blue Grey</a></span>
+                                        </div>
+                                        <div class="container__wrapper-product-prices">
+                                            <span class="container__wrapper-product-price-normal product-price-sale">2,970,000đ</span>
+                                        </div>
+                                        <div class="container__wrapper-product-button">
+                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
+                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </li>
+
+                            <li class="container__wrapper-product"> 
+                                <div class="container__wrapper-product-img">
+                                    <div class="container__wrapper-product-overlay"></div>
+                                    <div class="container__wrapper-product-button-see">
+                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
+                                    </div>
+                                    <img src="./img/Produces/Keyboards/iKBC/iKBC CD108 PD.jpg" alt="Sản phẩm">
+                                </div>
+                                <div class="container__wrapper-product-info">
+                                    <div class="container__wrapper-product-info-layout">
+                                        <div class="container__wrapper-product-name">
+                                            <span><a href="#" class="header__cart-list-item-name">Bàn phím cơ iKBC CD108 PD Red switch</a></span>
+                                        </div>
+                                        <div class="container__wrapper-product-prices">
+                                            <span class="container__wrapper-product-price-normal product-price-sale">1,750,000đ</span>
+                                            <span class="container__wrapper-product-price-normal">1,980,000đ</span>
+                                        </div>
+                                        <div class="container__wrapper-product-button">
+                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
+                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </li>
+
+                            <li class="container__wrapper-product">
+                                <div class="container__wrapper-product-img">
+                                    <div class="container__wrapper-product-overlay"></div>
+                                    <div class="container__wrapper-product-button-see">
+                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
+                                    </div>
+                                    <img src="./img/Produces/Keyboards/Razer/Razer Blackwidow V3 Tenkeyless Yellow switch.jpg" alt="Sản phẩm">
+                                </div>
+                                <div class="container__wrapper-product-info">
+                                    <div class="container__wrapper-product-info-layout">
+                                        <div class="container__wrapper-product-name">
+                                            <span><a href="#" class="header__cart-list-item-name">Bàn phím cơ Razer Blackwidow V3 Tenkeyless</a></span>
+                                        </div>
+                                        <div class="container__wrapper-product-prices">
+                                            <span class="container__wrapper-product-price-normal product-price-sale">2,989,000đ</span>
+                                        </div>
+                                        <div class="container__wrapper-product-button">
+                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
+                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="container__wrapper-product">
+                                <div class="container__wrapper-product-img">
+                                    <div class="container__wrapper-product-overlay"></div>
+                                    <div class="container__wrapper-product-button-see">
+                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
+                                    </div>
+                                    <img src="./img/Produces/Keyboards/Akko/akko 3084 v2 ASA Blackpink.jpg" alt="Sản phẩm">
+                                </div>
+                                <div class="container__wrapper-product-info">
+                                    <div class="container__wrapper-product-info-layout">
+                                        <div class="container__wrapper-product-name">
+                                            <span><a href="#" class="header__cart-list-item-name">Bàn phím cơ AKKO 3084 v2 ASA – Black Pink</a></span>
+                                        </div>
+                                        <div class="container__wrapper-product-prices">
+                                            <span class="container__wrapper-product-price-normal product-price-sale">1,690,000đ</span>
+                                            <span class="container__wrapper-product-price-normal">1,750,000đ</span>
+                                        </div>
+                                        <div class="container__wrapper-product-button">
+                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
+                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="container__wrapper-product">
+                                <div class="container__wrapper-product-img">
+                                    <div class="container__wrapper-product-overlay"></div>
+                                    <div class="container__wrapper-product-button-see">
+                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
+                                    </div>
+                                    <img src="./img/Produces/Keyboards/Leopold/Leopold FC650MDS Bluetooth Blue Grey.jpg" alt="Sản phẩm">
+                                </div>
+                                <div class="container__wrapper-product-info">
+                                    <div class="container__wrapper-product-info-layout">
+                                        <div class="container__wrapper-product-name">
+                                            <span><a href="#" class="header__cart-list-item-name">Bàn phím cơ Leopold FC650MDS Bluetooth Blue Grey</a></span>
+                                        </div>
+                                        <div class="container__wrapper-product-prices">
+                                            <span class="container__wrapper-product-price-normal product-price-sale">2,970,000đ</span>
+                                        </div>
+                                        <div class="container__wrapper-product-button">
+                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
+                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="container__wrapper-product"> 
+                                <div class="container__wrapper-product-img">
+                                    <div class="container__wrapper-product-overlay"></div>
+                                    <div class="container__wrapper-product-button-see">
+                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
+                                    </div>
+                                    <img src="./img/Produces/Keyboards/Leopold/Leopold FC650MDS Bluetooth Blue Grey.jpg" alt="Sản phẩm">
+                                </div>
+
+                                <div class="container__wrapper-product-info">
+                                    <div class="container__wrapper-product-info-layout">
+                                        <div class="container__wrapper-product-name">
+                                            <span><a href="#" class="header__cart-list-item-name">Bàn phím cơ Leopold FC650MDS Bluetooth Blue Grey</a></span>
+                                        </div>
+                                        <div class="container__wrapper-product-prices">
+                                            <span class="container__wrapper-product-price-normal product-price-sale">2,970,000đ</span>
+                                        </div>
+                                        <div class="container__wrapper-product-button">
+                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
+                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </li>
+
+                            <li class="container__wrapper-product"> 
+                                <div class="container__wrapper-product-img">
+                                    <div class="container__wrapper-product-overlay"></div>
+                                    <div class="container__wrapper-product-button-see">
+                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
+                                    </div>
+                                    <img src="./img/Produces/Keyboards/iKBC/iKBC CD108 PD.jpg" alt="Sản phẩm">
+                                </div>
+                                <div class="container__wrapper-product-info">
+                                    <div class="container__wrapper-product-info-layout">
+                                        <div class="container__wrapper-product-name">
+                                            <span><a href="#" class="header__cart-list-item-name">Bàn phím cơ iKBC CD108 PD Red switch</a></span>
+                                        </div>
+                                        <div class="container__wrapper-product-prices">
+                                            <span class="container__wrapper-product-price-normal product-price-sale">1,750,000đ</span>
+                                            <span class="container__wrapper-product-price-normal">1,980,000đ</span>
+                                        </div>
+                                        <div class="container__wrapper-product-button">
+                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
+                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </li>
+
+                            <li class="container__wrapper-product">
+                                <div class="container__wrapper-product-img">
+                                    <div class="container__wrapper-product-overlay"></div>
+                                    <div class="container__wrapper-product-button-see">
+                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
+                                    </div>
+                                    <img src="./img/Produces/Keyboards/Razer/Razer Blackwidow V3 Tenkeyless Yellow switch.jpg" alt="Sản phẩm">
+                                </div>
+                                <div class="container__wrapper-product-info">
+                                    <div class="container__wrapper-product-info-layout">
+                                        <div class="container__wrapper-product-name">
+                                            <span><a href="#" class="header__cart-list-item-name">Bàn phím cơ Razer Blackwidow V3 Tenkeyless</a></span>
+                                        </div>
+                                        <div class="container__wrapper-product-prices">
+                                            <span class="container__wrapper-product-price-normal product-price-sale">2,989,000đ</span>
+                                        </div>
+                                        <div class="container__wrapper-product-button">
+                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
+                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="container__wrapper-product">
+                                <div class="container__wrapper-product-img">
+                                    <div class="container__wrapper-product-overlay"></div>
+                                    <div class="container__wrapper-product-button-see">
+                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
+                                    </div>
+                                    <img src="./img/Produces/Keyboards/Akko/akko 3084 v2 ASA Blackpink.jpg" alt="Sản phẩm">
+                                </div>
+                                <div class="container__wrapper-product-info">
+                                    <div class="container__wrapper-product-info-layout">
+                                        <div class="container__wrapper-product-name">
+                                            <span><a href="#" class="header__cart-list-item-name">Bàn phím cơ AKKO 3084 v2 ASA – Black Pink</a></span>
+                                        </div>
+                                        <div class="container__wrapper-product-prices">
+                                            <span class="container__wrapper-product-price-normal product-price-sale">1,690,000đ</span>
+                                            <span class="container__wrapper-product-price-normal">1,750,000đ</span>
+                                        </div>
+                                        <div class="container__wrapper-product-button">
+                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
+                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="container__wrapper-product">
+                                <div class="container__wrapper-product-img">
+                                    <div class="container__wrapper-product-overlay"></div>
+                                    <div class="container__wrapper-product-button-see">
+                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
+                                    </div>
+                                    <img src="./img/Produces/Keyboards/Leopold/Leopold FC650MDS Bluetooth Blue Grey.jpg" alt="Sản phẩm">
+                                </div>
+                                <div class="container__wrapper-product-info">
+                                    <div class="container__wrapper-product-info-layout">
+                                        <div class="container__wrapper-product-name">
+                                            <span><a href="#" class="header__cart-list-item-name">Bàn phím cơ Leopold FC650MDS Bluetooth Blue Grey</a></span>
+                                        </div>
+                                        <div class="container__wrapper-product-prices">
+                                            <span class="container__wrapper-product-price-normal product-price-sale">2,970,000đ</span>
+                                        </div>
+                                        <div class="container__wrapper-product-button">
+                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
+                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="container__wrapper-product">
+                                <div class="container__wrapper-product-img">
+                                    <div class="container__wrapper-product-overlay"></div>
+                                    <div class="container__wrapper-product-button-see">
+                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
+                                    </div>
+                                    <img src="./img/Produces/Keyboards/Akko/akko 3084 v2 ASA Blackpink.jpg" alt="Sản phẩm">
+                                </div>
+                                <div class="container__wrapper-product-info">
+                                    <div class="container__wrapper-product-info-layout">
+                                        <div class="container__wrapper-product-name">
+                                            <span><a href="#" class="header__cart-list-item-name">Bàn phím cơ AKKO 3084 v2 ASA – Black Pink</a></span>
+                                        </div>
+                                        <div class="container__wrapper-product-prices">
+                                            <span class="container__wrapper-product-price-normal product-price-sale">1,690,000đ</span>
+                                            <span class="container__wrapper-product-price-normal">1,750,000đ</span>
+                                        </div>
+                                        <div class="container__wrapper-product-button">
+                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
+                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="container__wrapper-product">
+                                <div class="container__wrapper-product-img">
+                                    <div class="container__wrapper-product-overlay"></div>
+                                    <div class="container__wrapper-product-button-see">
+                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
+                                    </div>
+                                    <img src="./img/Produces/Keyboards/Leopold/Leopold FC650MDS Bluetooth Blue Grey.jpg" alt="Sản phẩm">
+                                </div>
+                                <div class="container__wrapper-product-info">
+                                    <div class="container__wrapper-product-info-layout">
+                                        <div class="container__wrapper-product-name">
+                                            <span><a href="#" class="header__cart-list-item-name">Bàn phím cơ Leopold FC650MDS Bluetooth Blue Grey</a></span>
+                                        </div>
+                                        <div class="container__wrapper-product-prices">
+                                            <span class="container__wrapper-product-price-normal product-price-sale">2,970,000đ</span>
+                                        </div>
+                                        <div class="container__wrapper-product-button">
+                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
+                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul> 
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="grid footer__container">
                 <ul>
-                    <li class="header__item"><a href="index.html">Trang chủ</a></li>
-                    <li class="header__item"><a href="#"><i class="icon fas fa-keyboard"></i>  Bàn phím</a>
-                        <div class="header__subitem">
-                            <ul>
-                                <li><a href="#">Bàn phím Akko</a></li>
-                                <li><a href="#">Bàn phím iKBC</a></li>
-                                <li><a href="#">Bàn phím DareU</a></li>
-                                <li><a href="#">Bàn phím FL-Esport</a></li>
-                                <li><a href="#">Bàn phím Leopold</a></li>
-                                <li><a href="#">Bàn phím Razer</a></li>
-                            </ul>
-                        </div>
+                    <li>
+                        <h3>Hệ thống cửa hàng</h3>
+                        <ul>
+                            <li>Địa chỉ 1: số 26, đường 57, ấp Chợ, xã Tân Phú Trung, Củ Chi, thành phố Hồ Chí Minh</li>
+                            <li>Địa chỉ 2: </li>
+                            <li>Địa chỉ 3: </li>
+                        </ul>
                     </li>
-                    <li class="header__item"><a href="#"><i class="icon fa fa-mouse"></i>  Chuột</a>
-                        <div class="header__subitem">
-                            <ul>
-                                <li><a href="#">Chuột Logitech</a></li>
-                                <li><a href="#">Chuột Steelseries</a></li>
-                                <li><a href="#">Chuột Fuhlen</a></li>
-                                <li><a href="#">Chuột Asus</a></li>
-                                <li><a href="#">Chuột Razer</a></li>
-                            </ul>
-                        </div>
+                    <li>
+                        <h3>Dịch vụ và chính sách</h3>
+                        <ul>
+                            <li>Tư vấn Hotline: 0938745593</li>
+                            <li><a href="#">Chính sách đổi trả</a></li>
+                            <li><a href="#">Chính sách bảo hành</a></li>
+                            <li><a href="#">Chính sách mua hàng</a></li>
+                        </ul>
                     </li>
-                    <li class="header__item"><a href="#"><i class="icon fa fa-headphones"></i>  Tai nghe</a>
-                        <div class="header__subitem">
-                            <ul>
-                                <li><a href="#">Tai nghe HyperX</a></li>
-                                <li><a href="#">Tai nghe Logitech</a></li>
-                                <li><a href="#">Tai nghe Rapoo</a></li>
-                            </ul>
-                        </div>
+                    <li>
+                        <h3>Mạng xã hội</h3>
+                        <ul>
+                            <li><i class="fa-brands fa-facebook-square"></i></li>
+                            <li><i class="fa-brands fa-instagram-square"></i></li>
+                            <li><i class="fa-brands fa-youtube-square"></i></li>
+                        </ul>
                     </li>
-                    <li class="header__item"><a href="#"><i class="icon fa fa-briefcase"></i>  Tuyển dụng</a></li>
-                    <li class="header__item"><a href="#"><i class="icon fa fa-headset"></i>  Tư vấn</a></li>
                 </ul>
             </div>
+        </footer>
 
-            <div class="header__search">
-                <input type="text" class="input header__search--box" placeholder="Tìm kiếm sản phẩm">
-                <a href="#" class="header__search--icon"><i class="icon search-icon fa fa-search"></i></a>
-            </div>
 
-            <div class="header__toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>  
-            
-            <div class="header__user"> 
-                <!-- Log in active -->
-                <div class="header__user--signin">
-                    <button class="btn btn--pri btn__login">LET'S BUY</button>
-                </div>
-
-                <!-- Log out unactive -->
-                <div class="header__user--container unactive">
-                    <div class="header__user-cart">
-                        <a href="#" class="header__user-cart--link">
-                            <i class="icon fa-solid fa-basket-shopping"></i>
-                            <span class="header__user-cart--quality">5</span>
-                        </a>
-                        <!-- Empty: header__user-cart-list--empty -->
-                        <div class="header__user-cart-list">
-                            <img src="./img/Cart/cart-list-empty.jpg" alt="" class="header__user-cart-empty-img">
-
-                            <h4 class="header__cart-list--heading">Danh sách sản phẩm</h4>
-                            <ul class="header__cart-list-items">
-                                <li class="header__cart-list-item">
-                                    <img src="./img/Produces/Keyboards/Akko/akko 3084 v2 ASA Blackpink.jpg" alt="Sản phẩm" class="header__cart-list-item-igm">
-
-                                    <div class="header__cart-list-item-info"> 
-                                        <div class="header__cart-list-item-name-box">
-                                            <a href="#" class="header__cart-list-item-name">Bàn phím cơ AKKO 3084 v2 ASA – Black Pink</a>
-                                        </div>
-                                        <span class="header__cart-list-item-price product-price-sale">1,690,000đ</span>
-                                        <div class="header__cart-list-item-detail">
-                                            <span class="header__cart-list-item-detail-heading">Số lượng:</span>
-                                            <span class="header__cart-list-item-quality">1</span>
-                                        </div>
-                                    </div>
-
-                                    <button class="btn btn--pri header__cart-list-item-remove">XÓA</button>
-                                </li> 
-
-                                <li class="header__cart-list-item">
-                                    <img src="./img/Produces/Mouses/Logitech/Logitech G304 Lightspeed Wireless White.jpg" alt="Sản phẩm" class="header__cart-list-item-igm">
-
-                                    <div class="header__cart-list-item-info"> 
-                                        <div class="header__cart-list-item-name-box">
-                                            <a href="#" class="header__cart-list-item-name">Chuột Logitech G304 Lightspeed Wireless White</a>
-                                        </div>
-                                        <span class="header__cart-list-item-price product-price-sale">849,000đ</span>
-                                        <div class="header__cart-list-item-detail">
-                                            <span class="header__cart-list-item-detail-heading">Số lượng:</span>
-                                            <span class="header__cart-list-item-quality">1</span>
-                                        </div>
-                                    </div>
-
-                                    <button class="btn btn--pri header__cart-list-item-remove">XÓA</button>
-                                </li> 
-
-                                <li class="header__cart-list-item">
-                                    <img src="./img/Produces/Keyboards/Leopold/Leopold FC650MDS Bluetooth Blue Grey.jpg" alt="Sản phẩm" class="header__cart-list-item-igm">
-
-                                    <div class="header__cart-list-item-info"> 
-                                        <div class="header__cart-list-item-name-box">
-                                            <a href="#" class="header__cart-list-item-name">Bàn phím Leopold FC650MDS Bluetooth Blue Grey</a>
-                                        </div>
-                                        <span class="header__cart-list-item-price product-price-sale">2,970,000đ</span>
-                                        <div class="header__cart-list-item-detail">
-                                            <span class="header__cart-list-item-detail-heading">Số lượng:</span>
-                                            <span class="header__cart-list-item-quality">2</span>
-                                        </div>
-                                    </div>
-
-                                    <button class="btn btn--pri header__cart-list-item-remove">XÓA</button>
-                                </li> 
-
-                                <li class="header__cart-list-item">
-                                    <img src="./img/Produces/Headphones/HyperX/HyperX Cloud Stinger Gaming Black.jpg" alt="Sản phẩm" class="header__cart-list-item-igm">
-
-                                    <div class="header__cart-list-item-info"> 
-                                        <div class="header__cart-list-item-name-box">
-                                            <a href="#" class="header__cart-list-item-name">Tai nghe HyperX Cloud Stinger Gaming Black</a>
-                                        </div>
-                                        <span class="header__cart-list-item-price product-price-sale">1,299,000đ</span>
-                                        <div class="header__cart-list-item-detail">
-                                            <span class="header__cart-list-item-detail-heading">Số lượng:</span>
-                                            <span class="header__cart-list-item-quality">1</span>
-                                        </div>
-                                    </div>
-
-                                    <button class="btn btn--pri header__cart-list-item-remove">XÓA</button>
-                                </li> 
-
-                                <li class="header__cart-list-item">
-                                    <img src="./img/Produces/Mouses/Asus/ASUS ROG Keris.jpg" alt="Sản phẩm" class="header__cart-list-item-igm">
-
-                                    <div class="header__cart-list-item-info"> 
-                                        <div class="header__cart-list-item-name-box">
-                                            <a href="#" class="header__cart-list-item-name">Chuột ASUS ROG Keris</a>
-                                        </div>
-                                        <span class="header__cart-list-item-price product-price-sale">1,250,000đ</span>
-                                        <div class="header__cart-list-item-detail">
-                                            <span class="header__cart-list-item-detail-heading">Số lượng:</span>
-                                            <span class="header__cart-list-item-quality">3</span>
-                                        </div>
-                                    </div>
-
-                                    <button class="btn btn--pri header__cart-list-item-remove">XÓA</button>
-                                </li> 
-                            </ul>
-                            <div class="header__cart-list-see">
-                                <button class="btn btn--pri header__cart-list-see-button">XEM GIỎ HÀNG</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="header__user--separate"></div>
-
-                    <div class="header__user-account">
-                        <a href="#" class="header__user-account--link"><i class="icon fa-solid fa-user"></i></a>
-                        <div class="header__user-account-info">
-                            <div class="header__user-account-img">
-                                <img src="./img/Account/avatar.jpg.jpg" alt="" class="header__user-account-avatar">
-                            </div>
-                            <span class="header__user-account-name">Nguyễn Minh Huy</span>
-                            <div class="header__user-account-info-details">
-                                <div class="header__user-account-contact">
-                                    <span class="header__user-account-phone">Số điện thoại: 0938745593</span>
-                                </div>
-                                <div class="header__user-account-adress">
-                                    <span class="header__user-account-Email">Email: nguyenminhhuy.0938745593@gmail.com</span>
-                                </div>
-                            </div>
-                            <div class="header__user-account-button">
-                                <button class="btn btn--pri header__user-account-edit">CHỈNH SỬA</button>
-                                <button class="btn btn--sec header__user-account-signout">ĐĂNG XUẤT</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          
-        </nav>
-    </header>
-    
     <div class="modal">
         <div class="modal__overlay"></div>
 
