@@ -41,7 +41,7 @@
 }
 
 .select-selected:hover {
-    border: 1px solid var(--button);
+    background-color: var(--button);
 }
 
 .select-selected:after {
@@ -62,20 +62,21 @@
 
 .select-items div,
 .select-selected {
-    counter-reset: #fff;
-    padding: 8px 16px;
-    border: 1px solid transparent;
+    padding: 15px 16px;
     border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
     cursor: pointer;
     user-select: none;
 }
 
 .select-items {
+    margin: 5px 0;
+    border-radius: 10px;
+    width: 70%;
     position: absolute;
-    background-color: var(--button);
+    background-color: rgb(239, 239, 239);
     top: 100%;
-    left: 0;
     right: 0;
+    overflow: hidden;
     z-index: 99;
 }
 
@@ -85,7 +86,7 @@
 
 .select-items div:hover,
 .same-as-selected {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--button);
 }
  
 .container__wrapper-products-list.page {
@@ -94,6 +95,59 @@
 
 .container__wrapper-products-list.page .container__wrapper-product {
     opacity: 1;
+}
+
+.container__page-numbers {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    transform: translateY(-50px);
+}
+
+.page-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-numbers .icon {
+    cursor: pointer;
+    padding: 0 10px;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.page-numbers .icon:hover {
+    color: var(--button);
+}
+
+.page-numbers ul {
+    display: flex;
+}
+
+.page-numbers ul li {
+    margin: 0 15px;
+    padding: 0 10px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.page-numbers ul li i {
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: default;
+}
+
+.page-numbers ul li.active {
+    color: var(--button);
+}
+
+.page-numbers ul li:hover {
+    color: var(--button);
 }
 
 /* RESPONSIVE */
@@ -152,5 +206,14 @@
 @media (max-width: 660px) {
     .container__wrapper-sort {
         margin: 10px 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .container__wrapper-filter-prices .input,
+    .container__wrapper-filter-prices .btn {
+        width: 310px;
+        margin: 10px auto;
+        display: block;
     }
 }
