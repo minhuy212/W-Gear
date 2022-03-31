@@ -43,7 +43,7 @@ for (i = 0 ; i < l ; i++) {
         c.innerHTML = selElmt.options[j].innerHTML;
         c.addEventListener("click", function(e) {
             var y, k, s, h, sl, yl;
-            s = this.parentNode.getElementsByTagName("select")[0];
+            s = this.parentNode.parentNode.getElementsByTagName("select")[0];
             sl = s.length;
             h = this.parentNode.previousSibling;
 
