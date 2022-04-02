@@ -1607,47 +1607,12 @@ footer {
     } 
 }
 
-@media(max-width: 500px) { 
-    .btn {
-        width: auto; 
-        padding: 0px 7px;
-    }
-
-    .header {
-        padding: 0 10px;
-    }
-
-    .header__logo {
-        font-size: 35px;
-    }
-
-    .header__item>a {
-        padding: 15px 20%;
-    } 
-
-    .header__user-cart-list {
-        visibility: hidden;
-    }
-
-    .btn__login {
-        font-size: 14px;
-    }
-
-    .auth-form__controls>.btn {
-        width: 200px;
-    }
-
-    .container__wrapper-products-list { 
-        grid-template-columns: calc(100%/2) calc(100%/2);
-        height: 450px; 
-    }    
-}
-
 @media(min-width: 600px) {   
     .container__wrapper-inner-heading h4 {
         font-size: 40px; 
     }
 }
+ 
 
 @media(max-width: 600px) { 
     .container__wrapper-inner-heading h4 {
@@ -1660,6 +1625,47 @@ footer {
     
     .footer__container>ul {
         display: block;
+    }
+}
+
+
+@media (max-width: 450px) {  
+    .header__user-account-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .header__user-account-name {
+        font-size: 18px;
+    }
+
+    .container__wrapper-blog-rate i {
+        font-size: 20px;
+    }
+
+    .modal__body {
+        width: 95%;
+    }
+
+    .auth-form {
+        width: 100%;
+    }
+
+    .auth-form__container {
+        padding: 0 20px;
+    }
+
+    .auth-form__input {
+        width: 100%;
+    }
+
+    .detail-form__product {
+        max-height: 85vh;
+    }
+
+    .container__wrapper-inner-heading h4,
+    .container__wrapper-products-heading-name {
+        font-size: 30px;
     }
 }
 
@@ -1746,21 +1752,39 @@ footer {
     } 
 }
 
-@media (max-width: 450px) { 
-
-    .modal__body {
-        width: 95%;
+@media(max-width: 500px) { 
+    .btn {
+        width: auto; 
+        padding: 0px 7px;
     }
 
-    .auth-form {
-        width: 100%;
+    .header {
+        padding: 0 10px;
     }
 
-    .auth-form__container {
-        padding: 0 20px;
+    .header__logo {
+        font-size: 35px;
     }
 
-    .auth-form__input {
-        width: 100%;
+    .header__item>a {
+        padding: 15px 20%;
+    } 
+
+    .header__user-cart-list,
+    .header__user-account-info {
+        visibility: hidden;
     }
+
+    .btn__login {
+        font-size: 14px;
+    }
+
+    .auth-form__controls>.btn {
+        width: 200px;
+    }
+
+    .container__wrapper-products-list { 
+        grid-template-columns: calc(100%/2) calc(100%/2);
+        height: 450px; 
+    }    
 }
