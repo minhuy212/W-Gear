@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/recruit.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet"> 
+    <link rel="icon" href="./img/Logo/Icon.png" type="image/png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/0591fa8989.js" crossorigin="anonymous"></script>
+    <title>Tuyển dụng W-Gear</title>
+</head>
+<body>
+    <div class="main recruit-page">
+        <header class="header">
+            <nav class="grid header__nav">
+                <div class="header__brand">
+                    <a href="index.html" class="header__logo">W<i class="header__logo-icon fa-solid fa-gamepad"></i>Gear</a>  
+                    <span>&copy;</span>
+                </div>
+                    
+                <div class="header__items">
+                    <ul>
+                        <li class="header__item"><a href="#banner">Giới thiệu</a></li>
+                        <li class="header__item"><a href="#why">Tại sao?</a></li>
+                        <li class="header__item"><a href="#recruit">Tuyển dụng</a></li>
+                        <li class="header__item"><a href="#contact">Liên hệ</a></li> 
+                    </ul>
+                </div>
+
+                <div class="header__toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>  
+
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="container__wrapper">
+                <section class="container__wrapper-banner" id="banner"> 
+                    <div class="banner-background">
+                        <img class="introduce-background-image" src="./img/background/background.jpg" alt="Hình nền">
+                    </div>
+
+                    <div class="banner-background-overlay"></div>
+
+                    <div class="banner-content">
+                        <div class="content-wrapper">
+                            <h2>
+                                Gia nhập đại gia đình W-Gear ngay thôi nào!!!
+                            </h2>
+                            <p>
+                                Khởi đầu khiêm tốn từ mong ước của một game thủ muốn các bạn cùng sở thích dễ dàng có được dàn gaming gear mình yêu thích, W-Gear đã bứt phá trở thành một trong những nhà bán lẻ IT hàng đầu tại Việt Nam. Thành công của W-Gear đến từ niềm tin rằng tiềm năng của con người là vô hạn, chúng tôi biết cách xây dựng môi trường làm việc đa dạng cùng mức thu nhập xứng đáng giúp mỗi cá nhân vượt qua giới hạn bản thân để góp phần tạo giá trị đột phá cho tập thể. Chỉ cần có nhiệt huyết và sự sáng tạo, hành trình phát triển của W-Gear cũng sẽ là hành trình phát triển sự nghiệp của chính bạn
+                            </p>
+                        </div> 
+                    </div>
+
+                </section>
+
+                <section class="section container__wrapper-why" id="why">
+                    <div class="introduce-container">
+                        <div class="section-head introduce-head">
+
+                        </div>
+                    </div>
+                </section>
+            </div> 
+        </div>
+
+        <footer class="footer">
+            <div class="grid footer__container">
+                <ul>
+                    <li>
+                        <h3>Hệ thống cửa hàng</h3>
+                        <ul>
+                            <li>Địa chỉ 1: số 26, đường 57, ấp Chợ, xã Tân Phú Trung, Củ Chi, thành phố Hồ Chí Minh</li>
+                            <li>Địa chỉ 2: </li>
+                            <li>Địa chỉ 3: </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Dịch vụ và chính sách</h3>
+                        <ul>
+                            <li>Tư vấn Hotline: 0938745593</li>
+                            <li><a href="#">Chính sách đổi trả</a></li>
+                            <li><a href="#">Chính sách bảo hành</a></li>
+                            <li><a href="#">Chính sách mua hàng</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Mạng xã hội</h3>
+                        <ul>
+                            <li><i class="fa-brands fa-facebook-square"></i></li>
+                            <li><i class="fa-brands fa-instagram-square"></i></li>
+                            <li><i class="fa-brands fa-youtube-square"></i></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div> 
+
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 50) {
+                    $(".recruit-page .header").addClass("scroll");
+                }
+                else {
+                    $(".recruit-page .header").removeClass("scroll");
+                }
+            });
+        });
+    </script>
+    <script src="./js/recruit.js"></script>
+</body>
+</html>
