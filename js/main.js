@@ -1,5 +1,4 @@
 const btn__login = document.querySelector('.btn__login');
-const btn__quit = document.querySelector('.btn__quit');
 const btn__login_web = document.querySelector('.btn__login_web');
 const btn__logout = document.querySelector('.header__user-account-signout');
 const header_user_signin = document.querySelector('.header__user--signin');
@@ -22,7 +21,8 @@ const detail_form_hdp = document.querySelector('.detail-form__product.Headphones
 const header__list_items = document.querySelector('.header__items');  
 
 var header__toggles = document.querySelectorAll('.header__toggle'); 
-var detail_quits = document.querySelectorAll('.detail-form__quit');
+var detail_quits = document.querySelectorAll('.detail-form__quit'); 
+var btn__quit = document.querySelectorAll('.btn__quit');
 var btn__see_detail_keys = document.querySelectorAll('.container__wrapper-products-list.Keyboards .container__wrapper-product-see'), i;
 var btn__see_detail_mses = document.querySelectorAll('.container__wrapper-products-list.Mouses .container__wrapper-product-see');
 var btn__see_detail_hdps = document.querySelectorAll('.container__wrapper-products-list.Headphones .container__wrapper-product-see');
@@ -67,11 +67,7 @@ function chechkAccount() {
 function logoutAccount() {
     header_user_signin.classList.remove('active');
     header_user_container.classList.add('unactive');
-}
-// function toggleActive() {
-//     header__toggle.classList.toggle('active');
-//     header__list_items.classList.toggle('active'); 
-// }  
+} 
 function showMoreKeyboards() {
     btn__see_more_key.classList.toggle('active');
     show_more_key.classList.add('active');
@@ -125,8 +121,11 @@ for (i = 0 ; i < detail_quits.length ; ++i) {
 for (i = 0 ; i < header__toggles.length ; ++i) {
     header__toggles[i].addEventListener('click', function() {
         this.classList.toggle('active');
-        header__list_items.classList.toggle('active');
+        header__list_items.classList.toggle('active'); 
     });
+}
+for (i = 0 ; i < btn__quit.length ; ++i) {
+    btn__quit[i].addEventListener('click', quitModal);
 }
 
 // header__cart.addEventListener('click', function() {
@@ -140,8 +139,7 @@ for (i = 0 ; i < header__toggles.length ; ++i) {
 btn__see_more_hdp.addEventListener('click', showMoreHeadphones);
 btn__see_more_key.addEventListener('click', showMoreKeyboards);
 btn__see_more_mse.addEventListener('click', showMoreMouses); 
-modal__overlay.addEventListener('click', quitModal);
-btn__quit.addEventListener('click', quitModal);
+modal__overlay.addEventListener('click', quitModal); 
 btn__login.addEventListener('click', showModal);
 btn__login_web.addEventListener('click', chechkAccount);
 btn__logout.addEventListener('click', logoutAccount);
