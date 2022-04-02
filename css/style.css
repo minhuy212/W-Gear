@@ -1625,6 +1625,10 @@ footer {
         padding: 15px 20%;
     } 
 
+    .header__user-cart-list {
+        visibility: hidden;
+    }
+
     .btn__login {
         font-size: 14px;
     }
