@@ -1,8 +1,6 @@
-const btn__login = document.querySelector('.btn__login');
+const btn__login = document.querySelector('.btn-sign-in');
 const btn__login_web = document.querySelector('.btn__login_web');
 const btn__logout = document.querySelector('.header__user-account-signout');
-const header_user_signin = document.querySelector('.header__user--signin');
-const header_user_container = document.querySelector('.header__user--container');
 const modal_signUp = document.querySelector('.auth-form__signup');
 const modal_signIn = document.querySelector('.auth-form__signin');
 const modal = document.querySelector('.modal'); 
@@ -61,12 +59,12 @@ function showModalSignUp() {
 }
 function chechkAccount() {
     quitModal();
-    header_user_signin.classList.add('active');
-    header_user_container.classList.remove('unactive');
+    document.querySelector('.sign-in').style.display = 'block';
+    document.querySelector('.sign-out').style.display = 'none';
 }
 function logoutAccount() {
-    header_user_signin.classList.remove('active');
-    header_user_container.classList.add('unactive');
+    document.querySelector('.sign-in').style.display = 'none';
+    document.querySelector('.sign-out').style.display = 'block';
 } 
 function showMoreKeyboards() {
     btn__see_more_key.classList.toggle('active');
@@ -124,17 +122,10 @@ for (i = 0 ; i < header__toggles.length ; ++i) {
         header__list_items.classList.toggle('active'); 
     });
 }
+
 for (i = 0 ; i < btn__quit.length ; ++i) {
     btn__quit[i].addEventListener('click', quitModal);
 }
-
-// header__cart.addEventListener('click', function() {
-//     header__cart_list.classList.toggle('acive');
-// });
-// header__user_account.addEventListener('click', function() {
-//     header__user_account.classList.toggle('acive'); 
-// });
-// header__toggle.addEventListener('click', toggleActive);
 
 btn__see_more_hdp.addEventListener('click', showMoreHeadphones);
 btn__see_more_key.addEventListener('click', showMoreKeyboards);

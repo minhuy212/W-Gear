@@ -67,6 +67,10 @@
     background-color: var(--button);
 }
 
+.recruit-page .header__toggle span {
+    background-color: var(--primary);
+}
+
 .section {
     padding: 40px 0;
 }
@@ -139,8 +143,41 @@
 /* RESPONSIVE */
 @media (max-width: 700px) {
     .recruit-page .header__items {
-        display: none;
+        width: 0;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        right: 0;  
+        transition: 1s;
+        position: absolute; 
+        background-color: rgba(0, 0, 0, 0.5);
+        /* display: none; */
     }
+
+    .recruit-page .header__items.active {
+        width: 100vw; 
+        transition: 1s;
+    }
+
+    .recruit-page .header__items ul {
+        display: block;
+        opacity: 0;
+        transition: 1s;
+    }
+
+    .recruit-page .header__items.active ul {
+        opacity: 1;
+        transition: 1s;
+    }
+    
+    .recruit-page .header__items ul li{
+        margin: 0 auto;
+    }
+
+    .recruit-page .header__items ul li a {
+        color: var(--primary);
+    }
+
     .recruit-page .header__toggle {
         display: block;
     }

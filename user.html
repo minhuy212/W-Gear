@@ -74,12 +74,6 @@
                 </div>  
                 
                 <div class="header__user"> 
-                    <!-- Log in active -->
-                    <div class="header__user--signin active">
-                        <button class="btn btn--pri btn__login">LET'S BUY</button>
-                    </div>
-
-                    <!-- Log out unactive -->
                     <div class="header__user--container">
                         <div class="header__user-cart">
                             <a href="cart.html" class="header__user-cart--link">
@@ -178,8 +172,11 @@
                                         <button class="btn btn--pri header__cart-list-item-remove">XÓA</button>
                                     </li> 
                                 </ul>
+
                                 <div class="header__cart-list-see">
-                                    <button class="btn btn--pri header__cart-list-see-button">XEM GIỎ HÀNG</button>
+                                    <a href="cart.html">
+                                        <button class="btn btn--pri header__cart-list-see-button">XEM GIỎ HÀNG</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -189,24 +186,37 @@
                         <div class="header__user-account">
                             <a href="user.html" class="header__user-account--link"><i class="icon fa-solid fa-user"></i></a>
 
-                            <!-- <div class="header__user-account-info">
-                                <div class="header__user-account-img">
-                                    <img src="./img/Account/avatar.jpg.jpg" alt="" class="header__user-account-avatar">
-                                </div>
-                                <span class="header__user-account-name">Nguyễn Minh Huy</span>
-                                <div class="header__user-account-info-details">
-                                    <div class="header__user-account-contact">
-                                        <span class="header__user-account-phone">Số điện thoại: 0938745593</span>
+                            <div class="header__user-account-info" style="display: none;">
+                                <div class="sign-in"> 
+                                    <div class="header__user-account-img">
+                                        <img src="./img/Account/avatar.jpg.jpg" alt="" class="header__user-account-avatar">
                                     </div>
-                                    <div class="header__user-account-adress">
-                                        <span class="header__user-account-Email">Email: nguyenminhhuy.0938745593@gmail.com</span>
+    
+                                    <span class="header__user-account-name">Nguyễn Minh Huy</span>
+    
+                                    <div class="header__user-account-info-details">
+                                        <div class="header__user-account-contact">
+                                            <span class="header__user-account-phone">Số điện thoại: 0938745593</span>
+                                        </div>
+                                        <div class="header__user-account-adress">
+                                            <span class="header__user-account-Email">Email: nguyenminhhuy.0938745593@gmail.com</span>
+                                        </div>
+                                    </div>
+    
+                                    <div class="header__user-account-button">
+                                        <a href="user.html">
+                                            <button class="btn btn--pri header__user-account-edit">CHỈNH SỬA</button>
+                                        </a>
+                                        <button class="btn btn--sec header__user-account-signout">ĐĂNG XUẤT</button>
                                     </div>
                                 </div>
-                                <div class="header__user-account-button">
-                                    <button class="btn btn--pri header__user-account-edit">CHỈNH SỬA</button>
-                                    <button class="btn btn--sec header__user-account-signout">ĐĂNG XUẤT</button>
+
+                                <div class="sign-out">
+                                    <h4 class="header__cart-list--heading">OOPS!!</h4>
+                                    <h4 class="header__cart-list--heading">BẠN CHƯA ĐĂNG NHẬP</h4>
+                                    <button class="btn btn--pri btn-sign-in">ĐĂNG NHẬP NGAY</button>
                                 </div>
-                            </div> -->
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -948,6 +958,6 @@
         </div>
     </div>
 
-    <script src="./js/main.js"></script>
+    <script src="./js/products.js"></script>
 </body>
 </html>
