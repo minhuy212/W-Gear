@@ -13,7 +13,7 @@
     <script src="https://kit.fontawesome.com/0591fa8989.js" crossorigin="anonymous"></script>
     <title>Tai nghe W-Gear</title>
 </head>
-<body class="sale-page">
+<body class="sale-page"  onload="customSelect(), sortHeadphones('Mới nhất')">
     <div class="main">
         <header class="header">
             <nav class="grid header__nav">
@@ -53,6 +53,7 @@
                                 <ul>
                                     <li><a href="headphones.html">Tai nghe HyperX</a></li>
                                     <li><a href="headphones.html">Tai nghe Logitech</a></li>
+                                    <li><a href="headphones.html">Tai nghe DareU</a></li>
                                     <li><a href="headphones.html">Tai nghe Rapoo</a></li>
                                 </ul>
                             </div>
@@ -61,12 +62,12 @@
                         <li class="header__item"><a href="remoteConsulation.html"><i class="icon fa fa-headset"></i>  Tư vấn</a></li>
                     </ul>
                 </div>
-    
+
                 <div class="header__search">
                     <input type="text" class="input header__search--box" placeholder="Tìm kiếm sản phẩm">
                     <a href="#" class="header__search--icon"><i class="icon search-icon fa fa-search"></i></a>
                 </div>
-    
+
                 <div class="header__toggle">
                     <span></span>
                     <span></span>
@@ -207,14 +208,14 @@
                                         <a href="user.html">
                                             <button class="btn btn--pri header__user-account-edit">CHỈNH SỬA</button>
                                         </a>
-                                        <button class="btn btn--sec header__user-account-signout">ĐĂNG XUẤT</button>
+                                        <button class="btn btn--sec header__user-account-signout" onclick="signOut()">ĐĂNG XUẤT</button>
                                     </div>
                                 </div>
 
                                 <div class="sign-out">
                                     <h4 class="header__cart-list--heading">OOPS!!</h4>
                                     <h4 class="header__cart-list--heading">BẠN CHƯA ĐĂNG NHẬP</h4>
-                                    <button class="btn btn--pri btn-sign-in">ĐĂNG NHẬP NGAY</button>
+                                    <button class="btn btn--pri btn-sign-in" onclick="signIn1()">ĐĂNG NHẬP NGAY</button>
                                 </div>
                             </div> 
                         </div>
@@ -232,36 +233,37 @@
 
                 <div class="container__wrapper-sort-filter-price">
                     <div class="container__wrapper-sort"> 
-                        <div class="container__wrapper-selection">
+                        <div class="container__wrapper-selection headphone">
                             <span>Sắp xếp</span>
                             <select>
-                                <option value="1">Mới nhất</option>
-                                <option value="2">Bán chạy</option>
-                                <option value="3">Giá giảm dần</option>
-                                <option value="4"> Giá tăng dần</option> 
+                                <option value="-1">Mới nhất</option>
+                                <option value="0">Mới nhất</option>
+                                <option value="1">Bán chạy</option>
+                                <option value="2">Giá giảm dần</option>
+                                <option value="3">Giá tăng dần</option> 
                             </select>
                         </div>
                     </div>
 
                     <div class="container__wrapper-filter">
-                        <div class="container__wrapper-selection">
+                        <div class="container__wrapper-selection headphone">
                             <span>Lọc hãng</span>
                             <select>
+                                <option value="-1">Tất cả</option>
                                 <option value="1">Tất cả</option>
                                 <option value="2">Logitech</option>
                                 <option value="3">HyperX</option>
                                 <option value="4">Rapoo</option>
-                                <option value="5">DareU</option>
-                                <option value="6">Các hãng khác</option>
+                                <option value="5">Các hãng khác</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="container__wrapper-price"> 
                         <div class="container__wrapper-filter-prices">
-                            <input type="text" placeholder="Tối thiểu 0đ" class="input">
-                            <input type="text" placeholder="Tối đa 20,000,000đ" class="input">
-                            <button class="btn btn--pri">Tìm kiếm</button>
+                            <input type="text" placeholder="Tối thiểu 0đ" id="min-price" class="input">
+                            <input type="text" placeholder="Tối đa 20,000,000đ" id="max-price" class="input">
+                            <button class="btn btn--pri" onclick="filterPriceHeadphones()">Tìm kiếm</button>
                         </div>
                     </div>
                 </div>
@@ -269,505 +271,7 @@
                 <div class="container__wrapper-inner">   
                     <div class="grid container__wrapper-products">  
                         <ul class="container__wrapper-products-list Headphones page">
-                            <li class="container__wrapper-product">
-                                <div class="container__wrapper-product-img">
-                                    <div class="container__wrapper-product-overlay"></div>
-                                    <div class="container__wrapper-product-button-see">
-                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
-                                    </div>
-                                    <img src="./img/Produces/Headphones/HyperX/HyperX Cloud 2 Red.jpg" alt="Sản phẩm">
-                                </div>
-                                <div class="container__wrapper-product-info">
-                                    <div class="container__wrapper-product-info-layout">
-                                        <div class="container__wrapper-product-name">
-                                            <span><a href="#" class="header__cart-list-item-name">Tai nghe HyperX Cloud 2 Red Black</a></span>
-                                        </div>
-                                        <div class="container__wrapper-product-prices">
-                                            <span class="container__wrapper-product-price-normal product-price-sale">2,199,000đ</span>
-                                            <span class="container__wrapper-product-price-normal">2,499,000đ</span>
-                                        </div>
-                                        <div class="container__wrapper-product-button">
-                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
-                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="container__wrapper-product">
-                                <div class="container__wrapper-product-img">
-                                    <div class="container__wrapper-product-overlay"></div>
-                                    <div class="container__wrapper-product-button-see">
-                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
-                                    </div>
-                                    <img src="./img/Produces/Headphones/HyperX/HyperX Cloud Stinger Gaming Black.jpg" alt="Sản phẩm">
-                                </div>
-                                <div class="container__wrapper-product-info">
-                                    <div class="container__wrapper-product-info-layout">
-                                        <div class="container__wrapper-product-name">
-                                            <span><a href="#" class="header__cart-list-item-name">Tai nghe HyperX Cloud Stinger Gaming Black</a></span>
-                                        </div>
-
-                                        <div class="container__wrapper-product-prices">
-                                            <span class="container__wrapper-product-price-normal product-price-sale">1,299,000đ</span>
-                                        </div>
-
-                                        <div class="container__wrapper-product-button">
-                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
-                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="container__wrapper-product">
-                                <div class="container__wrapper-product-img">
-                                    <div class="container__wrapper-product-overlay"></div>
-                                    <div class="container__wrapper-product-button-see">
-                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
-                                    </div>
-                                    <img src="./img/Produces/Headphones/Logitech/Logitech G Pro X League Of Legends.png" alt="Sản phẩm">
-                                </div>
-                                <div class="container__wrapper-product-info">
-                                    <div class="container__wrapper-product-info-layout">
-                                        <div class="container__wrapper-product-name">
-                                            <span><a href="#" class="header__cart-list-item-name">Tai nghe Logitech G Pro X League Of Legends</a></span>
-                                        </div>
-                                        <div class="container__wrapper-product-prices">
-                                            <span class="container__wrapper-product-price-normal product-price-sale">3,299,000đ</span>
-                                            <span class="container__wrapper-product-price-normal">3,699,000đ</span>
-                                        </div>
-                                        <div class="container__wrapper-product-button">
-                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
-                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="container__wrapper-product">
-                                <div class="container__wrapper-product-img">
-                                    <div class="container__wrapper-product-overlay"></div>
-                                    <div class="container__wrapper-product-button-see">
-                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
-                                    </div>
-                                    <img src="./img/Produces/Headphones/Logitech/Logitech G435 LightSpeed Wireless Off-White Lilac.png" alt="Sản phẩm">
-                                </div>
-                                <div class="container__wrapper-product-info">
-                                    <div class="container__wrapper-product-info-layout">
-                                        <div class="container__wrapper-product-name">
-                                            <span><a href="#" class="header__cart-list-item-name">Tai nghe Logitech G435 LightSpeed Wireless Off-White</a></span>
-                                        </div>
-                                        <div class="container__wrapper-product-prices">
-                                            <span class="container__wrapper-product-price-normal product-price-sale">1,549,000đ</span>
-                                            <span class="container__wrapper-product-price-normal">1,799,000đ</span>
-                                        </div>
-                                        <div class="container__wrapper-product-button">
-                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
-                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="container__wrapper-product">
-                                <div class="container__wrapper-product-img">
-                                    <div class="container__wrapper-product-overlay"></div>
-                                    <div class="container__wrapper-product-button-see">
-                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
-                                    </div>
-                                    <img src="./img/Produces/Headphones/Rapoo/Rapoo VM150.jpg" alt="Sản phẩm">
-                                </div>
-                                <div class="container__wrapper-product-info">
-                                    <div class="container__wrapper-product-info-layout">
-                                        <div class="container__wrapper-product-name">
-                                            <span><a href="#" class="header__cart-list-item-name">Tai nghe Rapoo VM150</a></span>
-                                        </div>
-                                        <div class="container__wrapper-product-prices">
-                                            <span class="container__wrapper-product-price-normal product-price-sale">449,000đ</span>
-                                        </div>
-                                        <div class="container__wrapper-product-button">
-                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
-                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                           <li class="container__wrapper-product">
-                                <div class="container__wrapper-product-img">
-                                    <div class="container__wrapper-product-overlay"></div>
-                                    <div class="container__wrapper-product-button-see">
-                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
-                                    </div>
-                                    <img src="./img/Produces/Headphones/HyperX/HyperX Cloud 2 Red.jpg" alt="Sản phẩm">
-                                </div>
-                                <div class="container__wrapper-product-info">
-                                    <div class="container__wrapper-product-info-layout">
-                                        <div class="container__wrapper-product-name">
-                                            <span><a href="#" class="header__cart-list-item-name">Tai nghe HyperX Cloud 2 Red Black</a></span>
-                                        </div>
-                                        <div class="container__wrapper-product-prices">
-                                            <span class="container__wrapper-product-price-normal product-price-sale">2,199,000đ</span>
-                                            <span class="container__wrapper-product-price-normal">2,499,000đ</span>
-                                        </div>
-                                        <div class="container__wrapper-product-button">
-                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
-                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="container__wrapper-product">
-                                <div class="container__wrapper-product-img">
-                                    <div class="container__wrapper-product-overlay"></div>
-                                    <div class="container__wrapper-product-button-see">
-                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
-                                    </div>
-                                    <img src="./img/Produces/Headphones/HyperX/HyperX Cloud 2 Red.jpg" alt="Sản phẩm">
-                                </div>
-                                <div class="container__wrapper-product-info">
-                                    <div class="container__wrapper-product-info-layout">
-                                        <div class="container__wrapper-product-name">
-                                            <span><a href="#" class="header__cart-list-item-name">Tai nghe HyperX Cloud 2 Red Black</a></span>
-                                        </div>
-                                        <div class="container__wrapper-product-prices">
-                                            <span class="container__wrapper-product-price-normal product-price-sale">2,199,000đ</span>
-                                            <span class="container__wrapper-product-price-normal">2,499,000đ</span>
-                                        </div>
-                                        <div class="container__wrapper-product-button">
-                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
-                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="container__wrapper-product">
-                                <div class="container__wrapper-product-img">
-                                    <div class="container__wrapper-product-overlay"></div>
-                                    <div class="container__wrapper-product-button-see">
-                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
-                                    </div>
-                                    <img src="./img/Produces/Headphones/HyperX/HyperX Cloud Stinger Gaming Black.jpg" alt="Sản phẩm">
-                                </div>
-                                <div class="container__wrapper-product-info">
-                                    <div class="container__wrapper-product-info-layout">
-                                        <div class="container__wrapper-product-name">
-                                            <span><a href="#" class="header__cart-list-item-name">Tai nghe HyperX Cloud Stinger Gaming Black</a></span>
-                                        </div>
-
-                                        <div class="container__wrapper-product-prices">
-                                            <span class="container__wrapper-product-price-normal product-price-sale">1,299,000đ</span>
-                                        </div>
-
-                                        <div class="container__wrapper-product-button">
-                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
-                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="container__wrapper-product">
-                                <div class="container__wrapper-product-img">
-                                    <div class="container__wrapper-product-overlay"></div>
-                                    <div class="container__wrapper-product-button-see">
-                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
-                                    </div>
-                                    <img src="./img/Produces/Headphones/Logitech/Logitech G Pro X League Of Legends.png" alt="Sản phẩm">
-                                </div>
-                                <div class="container__wrapper-product-info">
-                                    <div class="container__wrapper-product-info-layout">
-                                        <div class="container__wrapper-product-name">
-                                            <span><a href="#" class="header__cart-list-item-name">Tai nghe Logitech G Pro X League Of Legends</a></span>
-                                        </div>
-                                        <div class="container__wrapper-product-prices">
-                                            <span class="container__wrapper-product-price-normal product-price-sale">3,299,000đ</span>
-                                            <span class="container__wrapper-product-price-normal">3,699,000đ</span>
-                                        </div>
-                                        <div class="container__wrapper-product-button">
-                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
-                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="container__wrapper-product">
-                                <div class="container__wrapper-product-img">
-                                    <div class="container__wrapper-product-overlay"></div>
-                                    <div class="container__wrapper-product-button-see">
-                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
-                                    </div>
-                                    <img src="./img/Produces/Headphones/Logitech/Logitech G435 LightSpeed Wireless Off-White Lilac.png" alt="Sản phẩm">
-                                </div>
-                                <div class="container__wrapper-product-info">
-                                    <div class="container__wrapper-product-info-layout">
-                                        <div class="container__wrapper-product-name">
-                                            <span><a href="#" class="header__cart-list-item-name">Tai nghe Logitech G435 LightSpeed Wireless Off-White</a></span>
-                                        </div>
-                                        <div class="container__wrapper-product-prices">
-                                            <span class="container__wrapper-product-price-normal product-price-sale">1,549,000đ</span>
-                                            <span class="container__wrapper-product-price-normal">1,799,000đ</span>
-                                        </div>
-                                        <div class="container__wrapper-product-button">
-                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
-                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="container__wrapper-product">
-                                <div class="container__wrapper-product-img">
-                                    <div class="container__wrapper-product-overlay"></div>
-                                    <div class="container__wrapper-product-button-see">
-                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
-                                    </div>
-                                    <img src="./img/Produces/Headphones/Rapoo/Rapoo VM150.jpg" alt="Sản phẩm">
-                                </div>
-                                <div class="container__wrapper-product-info">
-                                    <div class="container__wrapper-product-info-layout">
-                                        <div class="container__wrapper-product-name">
-                                            <span><a href="#" class="header__cart-list-item-name">Tai nghe Rapoo VM150</a></span>
-                                        </div>
-                                        <div class="container__wrapper-product-prices">
-                                            <span class="container__wrapper-product-price-normal product-price-sale">449,000đ</span>
-                                        </div>
-                                        <div class="container__wrapper-product-button">
-                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
-                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                           <li class="container__wrapper-product">
-                                <div class="container__wrapper-product-img">
-                                    <div class="container__wrapper-product-overlay"></div>
-                                    <div class="container__wrapper-product-button-see">
-                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
-                                    </div>
-                                    <img src="./img/Produces/Headphones/HyperX/HyperX Cloud 2 Red.jpg" alt="Sản phẩm">
-                                </div>
-                                <div class="container__wrapper-product-info">
-                                    <div class="container__wrapper-product-info-layout">
-                                        <div class="container__wrapper-product-name">
-                                            <span><a href="#" class="header__cart-list-item-name">Tai nghe HyperX Cloud 2 Red Black</a></span>
-                                        </div>
-                                        <div class="container__wrapper-product-prices">
-                                            <span class="container__wrapper-product-price-normal product-price-sale">2,199,000đ</span>
-                                            <span class="container__wrapper-product-price-normal">2,499,000đ</span>
-                                        </div>
-                                        <div class="container__wrapper-product-button">
-                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
-                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="container__wrapper-product">
-                                <div class="container__wrapper-product-img">
-                                    <div class="container__wrapper-product-overlay"></div>
-                                    <div class="container__wrapper-product-button-see">
-                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
-                                    </div>
-                                    <img src="./img/Produces/Headphones/HyperX/HyperX Cloud Stinger Gaming Black.jpg" alt="Sản phẩm">
-                                </div>
-                                <div class="container__wrapper-product-info">
-                                    <div class="container__wrapper-product-info-layout">
-                                        <div class="container__wrapper-product-name">
-                                            <span><a href="#" class="header__cart-list-item-name">Tai nghe HyperX Cloud Stinger Gaming Black</a></span>
-                                        </div>
-
-                                        <div class="container__wrapper-product-prices">
-                                            <span class="container__wrapper-product-price-normal product-price-sale">1,299,000đ</span>
-                                        </div>
-
-                                        <div class="container__wrapper-product-button">
-                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
-                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="container__wrapper-product">
-                                <div class="container__wrapper-product-img">
-                                    <div class="container__wrapper-product-overlay"></div>
-                                    <div class="container__wrapper-product-button-see">
-                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
-                                    </div>
-                                    <img src="./img/Produces/Headphones/Logitech/Logitech G Pro X League Of Legends.png" alt="Sản phẩm">
-                                </div>
-                                <div class="container__wrapper-product-info">
-                                    <div class="container__wrapper-product-info-layout">
-                                        <div class="container__wrapper-product-name">
-                                            <span><a href="#" class="header__cart-list-item-name">Tai nghe Logitech G Pro X League Of Legends</a></span>
-                                        </div>
-                                        <div class="container__wrapper-product-prices">
-                                            <span class="container__wrapper-product-price-normal product-price-sale">3,299,000đ</span>
-                                            <span class="container__wrapper-product-price-normal">3,699,000đ</span>
-                                        </div>
-                                        <div class="container__wrapper-product-button">
-                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
-                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="container__wrapper-product">
-                                <div class="container__wrapper-product-img">
-                                    <div class="container__wrapper-product-overlay"></div>
-                                    <div class="container__wrapper-product-button-see">
-                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
-                                    </div>
-                                    <img src="./img/Produces/Headphones/Logitech/Logitech G435 LightSpeed Wireless Off-White Lilac.png" alt="Sản phẩm">
-                                </div>
-                                <div class="container__wrapper-product-info">
-                                    <div class="container__wrapper-product-info-layout">
-                                        <div class="container__wrapper-product-name">
-                                            <span><a href="#" class="header__cart-list-item-name">Tai nghe Logitech G435 LightSpeed Wireless Off-White</a></span>
-                                        </div>
-                                        <div class="container__wrapper-product-prices">
-                                            <span class="container__wrapper-product-price-normal product-price-sale">1,549,000đ</span>
-                                            <span class="container__wrapper-product-price-normal">1,799,000đ</span>
-                                        </div>
-                                        <div class="container__wrapper-product-button">
-                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
-                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="container__wrapper-product">
-                                <div class="container__wrapper-product-img">
-                                    <div class="container__wrapper-product-overlay"></div>
-                                    <div class="container__wrapper-product-button-see">
-                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
-                                    </div>
-                                    <img src="./img/Produces/Headphones/Rapoo/Rapoo VM150.jpg" alt="Sản phẩm">
-                                </div>
-                                <div class="container__wrapper-product-info">
-                                    <div class="container__wrapper-product-info-layout">
-                                        <div class="container__wrapper-product-name">
-                                            <span><a href="#" class="header__cart-list-item-name">Tai nghe Rapoo VM150</a></span>
-                                        </div>
-                                        <div class="container__wrapper-product-prices">
-                                            <span class="container__wrapper-product-price-normal product-price-sale">449,000đ</span>
-                                        </div>
-                                        <div class="container__wrapper-product-button">
-                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
-                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="container__wrapper-product">
-                                <div class="container__wrapper-product-img">
-                                    <div class="container__wrapper-product-overlay"></div>
-                                    <div class="container__wrapper-product-button-see">
-                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
-                                    </div>
-                                    <img src="./img/Produces/Headphones/HyperX/HyperX Cloud Stinger Gaming Black.jpg" alt="Sản phẩm">
-                                </div>
-                                <div class="container__wrapper-product-info">
-                                    <div class="container__wrapper-product-info-layout">
-                                        <div class="container__wrapper-product-name">
-                                            <span><a href="#" class="header__cart-list-item-name">Tai nghe HyperX Cloud Stinger Gaming Black</a></span>
-                                        </div>
-
-                                        <div class="container__wrapper-product-prices">
-                                            <span class="container__wrapper-product-price-normal product-price-sale">1,299,000đ</span>
-                                        </div>
-
-                                        <div class="container__wrapper-product-button">
-                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
-                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="container__wrapper-product">
-                                <div class="container__wrapper-product-img">
-                                    <div class="container__wrapper-product-overlay"></div>
-                                    <div class="container__wrapper-product-button-see">
-                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
-                                    </div>
-                                    <img src="./img/Produces/Headphones/Logitech/Logitech G Pro X League Of Legends.png" alt="Sản phẩm">
-                                </div>
-                                <div class="container__wrapper-product-info">
-                                    <div class="container__wrapper-product-info-layout">
-                                        <div class="container__wrapper-product-name">
-                                            <span><a href="#" class="header__cart-list-item-name">Tai nghe Logitech G Pro X League Of Legends</a></span>
-                                        </div>
-                                        <div class="container__wrapper-product-prices">
-                                            <span class="container__wrapper-product-price-normal product-price-sale">3,299,000đ</span>
-                                            <span class="container__wrapper-product-price-normal">3,699,000đ</span>
-                                        </div>
-                                        <div class="container__wrapper-product-button">
-                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
-                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="container__wrapper-product">
-                                <div class="container__wrapper-product-img">
-                                    <div class="container__wrapper-product-overlay"></div>
-                                    <div class="container__wrapper-product-button-see">
-                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
-                                    </div>
-                                    <img src="./img/Produces/Headphones/Logitech/Logitech G435 LightSpeed Wireless Off-White Lilac.png" alt="Sản phẩm">
-                                </div>
-                                <div class="container__wrapper-product-info">
-                                    <div class="container__wrapper-product-info-layout">
-                                        <div class="container__wrapper-product-name">
-                                            <span><a href="#" class="header__cart-list-item-name">Tai nghe Logitech G435 LightSpeed Wireless Off-White</a></span>
-                                        </div>
-                                        <div class="container__wrapper-product-prices">
-                                            <span class="container__wrapper-product-price-normal product-price-sale">1,549,000đ</span>
-                                            <span class="container__wrapper-product-price-normal">1,799,000đ</span>
-                                        </div>
-                                        <div class="container__wrapper-product-button">
-                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
-                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="container__wrapper-product">
-                                <div class="container__wrapper-product-img">
-                                    <div class="container__wrapper-product-overlay"></div>
-                                    <div class="container__wrapper-product-button-see">
-                                        <button class="btn btn--sec container__wrapper-product-see">XEM CHI TIẾT</button>
-                                    </div>
-                                    <img src="./img/Produces/Headphones/Rapoo/Rapoo VM150.jpg" alt="Sản phẩm">
-                                </div>
-                                <div class="container__wrapper-product-info">
-                                    <div class="container__wrapper-product-info-layout">
-                                        <div class="container__wrapper-product-name">
-                                            <span><a href="#" class="header__cart-list-item-name">Tai nghe Rapoo VM150</a></span>
-                                        </div>
-                                        <div class="container__wrapper-product-prices">
-                                            <span class="container__wrapper-product-price-normal product-price-sale">449,000đ</span>
-                                        </div>
-                                        <div class="container__wrapper-product-button">
-                                            <button class="btn container__wrapper-product-favourite"><i class="icon icon-favourite fa fa-heart"></i></button>
-                                            <button class="btn container__wrapper-product-add-cart"><i class="icon icon-add-cart fa fa-cart-shopping"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                            
                         </ul>
                     </div> 
                 </div>
@@ -823,16 +327,16 @@
 
     </div>  
     
-    <div class="modal">
-        <div class="modal__overlay"></div>
+    <div class="modal" id="modal">
+        <div class="modal__overlay" onclick="quitModal()"></div>
 
         <div class="modal__body">
              <!--Sign up form  -->
-             <div class="auth-form auth-form__signup">
+            <div class="auth-form auth-form__signup" id="sign-up">
                 <div class="auth-form__container">
                     <div class="auth-form__header">
                         <h3 class="auth-form__heading">ĐĂNG KÝ</h3>
-                        <span class="auth-form__switch-btn auth-form__switch-btn-signin">ĐĂNG NHẬP</span>
+                        <span class="auth-form__switch-btn auth-form__switch-btn-signin" onclick="switchToSignIn()">ĐĂNG NHẬP</span>
                     </div>
                         
                     <div class="auth-form__form">
@@ -864,18 +368,18 @@
                     </div>
 
                     <div class="auth-form__controls">
-                        <button class="btn btn--sec btn__quit">TRỞ LẠI</button>
+                        <button class="btn btn--sec btn__quit" onclick="quitModal()">TRỞ LẠI</button>
                         <button class="btn btn--pri">ĐĂNG KÝ</button>
                     </div>
                 </div>
             </div> 
 
             <!-- Sign in form -->
-            <div class="auth-form auth-form__signin">
+            <div class="auth-form auth-form__signin" id="sign-in">
                 <div class="auth-form__container">
                     <div class="auth-form__header">
                         <h3 class="auth-form__heading">ĐĂNG NHẬP</h3>
-                        <span class="auth-form__switch-btn auth-form__switch-btn-signup">ĐĂNG KÝ</span>
+                        <span class="auth-form__switch-btn auth-form__switch-btn-signup" onclick="switchToSignUp()">ĐĂNG KÝ</span>
                     </div>
                         
                     <div class="auth-form__form">
@@ -904,8 +408,8 @@
                     </div>
                     
                     <div class="auth-form__controls">
-                        <button class="btn btn--sec btn__quit">TRỞ LẠI</button>
-                        <button class="btn btn--pri btn__login_web">ĐĂNG NHẬP</button>
+                        <button class="btn btn--sec btn__quit" onclick="quitModal()">TRỞ LẠI</button>
+                        <button class="btn btn--pri btn__login_web" onclick="signIn2()">ĐĂNG NHẬP</button>
                     </div>
                 </div>
             </div> 
@@ -1087,7 +591,7 @@
                             </div>
                         </div>
                     </div>
-
+D
                     <div class="detail-form__product-footing">
                         <div class="product-services-form">
                             <div class="detail-form__product-configuration-heading product-services-form-heading">
@@ -1540,6 +1044,6 @@
         </div>
     </div>
 
-    <script src="./js/products.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
