@@ -2,7 +2,7 @@
 
 
 // KIỂM TRA TÀI KHOẢN
-export function isUserValid(un, pw) {
+function isUserValid(un, pw) {
     if (un == '' && pw == '') {
         localStorage.setItem('isSignIn', 1);
         return true;
@@ -11,14 +11,12 @@ export function isUserValid(un, pw) {
 }
 
 // ĐĂNG NHẬP
-export function signIn1() {
-    document.getElementsByClassName('btn-sign-in')[0].addEventListener('click', function() {
-        document.getElementsByClassName('modal')[0].classList.add('active');
-        document.getElementById('sign-in').classList.add('active');
-    });
+function signIn1() {
+    document.getElementsByClassName('modal')[0].classList.add('active');
+    document.getElementById('sign-in').classList.add('active');
 }
 
-export function signIn2() {
+function signIn2() {
     if (isUserValid('','')) {
         quitModal();
         document.getElementsByClassName('sign-in')[0].style.display = 'block';
@@ -27,16 +25,14 @@ export function signIn2() {
 }
 
 // ĐĂNG XUẤT
-export function signOut() {
-    document.getElementsByClassName('header__user-account-signout')[0].addEventListener('click', function() {
-        document.getElementsByClassName('sign-in')[0].style.display = 'none';
-        document.getElementsByClassName('sign-out')[0].style.display = 'block';
-        localStorage.setItem('isSignIn', 0);
-    });
+function signOut() {
+    document.getElementsByClassName('sign-in')[0].style.display = 'none';
+    document.getElementsByClassName('sign-out')[0].style.display = 'block';
+    localStorage.setItem('isSignIn', 0);
 }
 
 // KIỂM TRA ĐĂNG NHẬP
-export function checkUser() {
+function checkUser() {
     if (localStorage.getItem('isSignIn') == 1) {
         signIn2();
     }
@@ -46,57 +42,35 @@ export function checkUser() {
 }
 
 // CHUYỂN ĐĂNG NHẬP -> ĐĂNG KÝ, ĐĂNG KÝ -> ĐĂNG NHẬP
-export function switchToSignUp() {
-    document.getElementsByClassName('auth-form__switch-btn-signin').addEventListener('click', function() {
-        document.getElementById('sign-in').classList.remove('active');
-        document.getElementById('sign-up').classList.add('active');
-    });
+function switchToSignUp() {
+    document.getElementById('sign-in').classList.remove('active');
+    document.getElementById('sign-up').classList.add('active');
 }
 
-export function switchToSignIn() {
-    document.getElementsByClassName('auth-form__switch-btn-signu[').addEventListener('click', function() {
-        document.getElementById('sign-up').classList.remove('active');
-        document.getElementById('sign-in').classList.add('active');
-    });
+function switchToSignIn() {
+    document.getElementById('sign-up').classList.remove('active');
+    document.getElementById('sign-in').classList.add('active');
 }
 
 // THOÁT MODAL
-export function quitModal() {
-    document.getElementsByClassName('modal__overlay')[0].addEventListener('click', function() {
-        document.getElementById('modal').classList.remove('active');
-        document.getElementById('sign-in').classList.remove('active');
-        document.getElementById('sign-up').classList.remove('active');
-    });
+function quitModal() {
+    document.getElementById('modal').classList.remove('active');
+    document.getElementById('sign-in').classList.remove('active');
+    document.getElementById('sign-up').classList.remove('active');
 }
 
 // HIỂN THỊ DANH SÁCH HEADER VÀ THANH TÌM KIẾM
-export function toggleHeader() {
+function toggleHeader() {
     document.getElementsByClassName('header__toggle')[0].addEventListener('click', function() {
         this.classList.toggle('active');
         document.getElementsByClassName('header__items')[0].classList.toggle('active');
         document.getElementsByClassName('header__search')[0].classList.toggle('active');
     })
 }
-
-// SLIDES
-export function slides() { 
-    var counter = 1;
-    setInterval(function() {
-        document.getElementById('radio' + counter).checked = true;
-        counter++;
-        if (counter > 4) {
-            counter = 1;
-        }
-    }, 2300);
-}
-
-// RANDON DATE
-export function randomDate(start, end) {
-    return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
-}
+toggleHeader();
 
 // SO SÁNH
-export function priceLessThan(a, b) {
+function priceLessThan(a, b) {
     if (a.length < b.length) {
         return true; 
     }
@@ -106,7 +80,7 @@ export function priceLessThan(a, b) {
 }
 
 // TẢI DANH SÁCH SẢN PHẨM
-export var keyboards = [
+var keyboards = [
     {
         brand: "Leopold",
         img: "\"./img/Produces/Keyboards/Leopold/Leopold FC650MDS Bluetooth Blue Grey.jpg\"",
@@ -288,9 +262,9 @@ export var keyboards = [
         sold: 151,
     },
 ];
-export var tempkeyboards = keyboards;
+var tempkeyboards = keyboards;
 
-export var mouses = [
+var mouses = [
     {
         brand: "Asus",
         img: "\"./img/Produces/Mouses/Asus/ASUS ROG Keris.jpg\"",
@@ -472,9 +446,9 @@ export var mouses = [
         sold: 712,
     },
 ];
-export var tempmouses = mouses;
+var tempmouses = mouses;
 
-export var headphones = [
+var headphones = [
     {
         brand: "HyperX",
         img: "\"./img/Produces/Headphones/HyperX/HyperX Cloud 2 Red.jpg\"",
@@ -657,9 +631,9 @@ export var headphones = [
     },
     
 ];
-export var tempheadphones = headphones;   
+var tempheadphones = headphones;   
 
-export function loadProduct(qk, qm, qh) {  
+function loadProduct(qk, qm, qh) {  
     var keyboardContainer;
     var mouseContainer;
     var headphoneContainer;
@@ -704,7 +678,7 @@ export function loadProduct(qk, qm, qh) {
     }
     function renderProduct() {
         var results = ""; 
-        for (let i = 0 ; i < 10 ; i++) {
+        for (i = 0 ; i < 10 ; i++) {
             results += `
                         <li class="container__wrapper-product"> 
                             <a href="detailKeyboard.html">
@@ -738,7 +712,7 @@ export function loadProduct(qk, qm, qh) {
         }
         
         results = "";
-        for (let i = 0 ; i < 10 ; i++) {
+        for (i = 0 ; i < 10 ; i++) {
             results += `
                         <li class="container__wrapper-product"> 
                             <a href="detailMouse.html">
@@ -771,7 +745,7 @@ export function loadProduct(qk, qm, qh) {
         }
          
         results = "";
-        for (let i = 0 ; i < 10 ; i++) { 
+        for (i = 0 ; i < 10 ; i++) { 
             results += `
                         <li class="container__wrapper-product"> 
                             <a href="detailHeadphone.html">
@@ -809,7 +783,7 @@ export function loadProduct(qk, qm, qh) {
 
 // SẮP XẾP - LỌC HÃNG - LỌC GIÁ DANH SÁCH SẢN PHẨM
 // BÀN PHÍM
-export function sortKeyboards(s) { 
+function sortKeyboards(s) { 
     var sortKeyboard = tempkeyboards;
     if (s == "Mới nhất") {
         for (let i = 0 ; i < sortKeyboard.length ; i++) {
@@ -856,7 +830,7 @@ export function sortKeyboards(s) {
         }
     }
     var results = ""; 
-    for (let i = 0 ; i < sortKeyboard.length ; i++) {
+    for (i = 0 ; i < sortKeyboard.length ; i++) {
         results += `
                     <li class="container__wrapper-product"> 
                         <a href="detailKeyboard.html">
@@ -888,7 +862,7 @@ export function sortKeyboards(s) {
     document.getElementsByClassName('container__wrapper-products-list Keyboards')[0].innerHTML = results;  
 }
 
-export function filterKeyboards(s) {
+function filterKeyboards(s) {
     if (s == "Tất cả")
         tempkeyboards = keyboards;
     else {
@@ -933,7 +907,7 @@ export function filterKeyboards(s) {
     document.getElementsByClassName('container__wrapper-products-list Keyboards')[0].innerHTML = results;  
 }
 
-export function filterPriceKeyboard() {
+function filterPriceKeyboard() {
     var min = document.getElementById('min-price').value;
     var max = document.getElementById('max-price').value;
 
@@ -987,7 +961,7 @@ export function filterPriceKeyboard() {
 }
 
 // CHUỘT
-export function sortMouses(s) { 
+function sortMouses(s) { 
     var sortMouse = tempmouses;
     if (s == "Mới nhất") {
         for (let i = 0 ; i < sortMouse.length ; i++) {
@@ -1066,7 +1040,7 @@ export function sortMouses(s) {
     document.getElementsByClassName('container__wrapper-products-list Mouses')[0].innerHTML = results;  
 }
 
-export function filterMouses(s) { 
+function filterMouses(s) { 
     if (s == "Tất cả")
         tempmouses = mouses;
     else {
@@ -1111,7 +1085,7 @@ export function filterMouses(s) {
     document.getElementsByClassName('container__wrapper-products-list Mouses')[0].innerHTML = results;  
 }
 
-export function filterPriceMouses() {
+function filterPriceMouses() {
     var min = document.getElementById('min-price').value;
     var max = document.getElementById('max-price').value;
 
@@ -1162,7 +1136,7 @@ export function filterPriceMouses() {
 }
 
 // TAI NGHE
-export function sortHeadphones(s) { 
+function sortHeadphones(s) { 
     var sortHeadphone = tempheadphones;
     if (s == "Mới nhất") {
         for (let i = 0 ; i < sortHeadphone.length ; i++) {
@@ -1241,7 +1215,7 @@ export function sortHeadphones(s) {
     document.getElementsByClassName('container__wrapper-products-list Headphones')[0].innerHTML = results;  
 }
 
-export function filterHeadphones(s) { 
+function filterHeadphones(s) { 
     if (s == "Tất cả")
         tempheadphones = headphones;
     else {
@@ -1286,7 +1260,7 @@ export function filterHeadphones(s) {
     document.getElementsByClassName('container__wrapper-products-list Headphones')[0].innerHTML = results;  
 }
 
-export function filterPriceHeadphones() {
+function filterPriceHeadphones() {
     var min = document.getElementById('min-price').value;
     var max = document.getElementById('max-price').value;
 
@@ -1338,115 +1312,24 @@ export function filterPriceHeadphones() {
 
 
 // HIỂN THỊ THÊM SẢN PHẨM
-export function showMoreKeyboards() {
+function showMoreKeyboards() {
     document.querySelector('.container__wrapper-product-footing-button-see-more.key').classList.toggle('active');
     document.querySelector('.container__wrapper-products-list.Keyboards').classList.toggle('active');
 }
-export function showMoreMouses() {
+function showMoreMouses() {
     document.querySelector('.container__wrapper-product-footing-button-see-more.mse').classList.toggle('active');
     document.querySelector('.container__wrapper-products-list.Mouses').classList.toggle('active');
 }
-export function showMoreHeadphones() {
+function showMoreHeadphones() {
     document.querySelector('.container__wrapper-product-footing-button-see-more.hdp').classList.toggle('active');
     document.querySelector('.container__wrapper-products-list.Headphones').classList.toggle('active');
 }
 
-// TẠO SELECTION
-export function customSelect() {
-    var x, j, l, ll, selElmt, a, b, c;
-    x = document.getElementsByClassName('container__wrapper-selection');
-    l = x.length;
-    for (let i = 0 ; i < l ; i++) {
-        selElmt = x[i].getElementsByTagName("select")[0];
-        ll = selElmt.length;
-
-        a = document.createElement("DIV");
-        a.setAttribute("class", "select-selected");
-        a.innerHTML = selElmt.options[selElmt.selectedIndex].innerHTML;
-        x[i].appendChild(a);
-
-        b = document.createElement("DIV");
-        b.setAttribute("class", "select-items select-hide");
-        for (j = 1 ; j < ll ; j++) {
-            c = document.createElement("DIV");
-            c.innerHTML = selElmt.options[j].innerHTML;
-            c.addEventListener("click", function(e) {
-                var y, k, s, h, sl, yl;
-                s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-                sl = s.length;
-                h = this.parentNode.previousSibling;
-
-                for (i = 0 ; i < sl ; i++) {
-                    if (s.options[i].innerHTML == this.innerHTML) {
-                        s.selectedIndex = i;
-                        h.innerHTML = this.innerHTML;
-                        y = this.parentNode.getElementsByClassName("same-as-selected");
-                        yl = y.length;
-                        for (k = 0 ; k < yl ; k++) {
-                            y[k].removeAttribute("class");
-                        }
-                        this.setAttribute("class", "same-as-selected");
-                        break;
-                    }
-                }
-                h.click();
-                if (this.textContent == "Mới nhất" || this.textContent == "Bán chạy" || this.textContent == "Giá giảm dần" || this.textContent == "Giá tăng dần") {
-                    if (document.getElementsByClassName('container__wrapper-selection keyboard').length != 0) {
-                        sortKeyboards(this.textContent);
-                    }
-                    if (document.getElementsByClassName('container__wrapper-selection mouse').length != 0) {
-                        sortMouses(this.textContent);
-                    }
-                    if (document.getElementsByClassName('container__wrapper-selection headphone').length != 0) {
-                        sortHeadphones(this.textContent);
-                    }
-                }
-                else {
-                    if (document.getElementsByClassName('container__wrapper-selection keyboard').length != 0)
-                        filterKeyboards(this.textContent);
-                    if (document.getElementsByClassName('container__wrapper-selection mouse').length != 0) 
-                        filterMouses(this.textContent);
-                    if (document.getElementsByClassName('container__wrapper-selection headphone').length != 0) 
-                        filterHeadphones(this.textContent);
-                }
-            }); 
-            b.appendChild(c);
-        }
-        x[i].appendChild(b);
-        a.addEventListener("click", function(e) {
-            e.stopPropagation();
-            closeAllSelect(this);
-            this.nextSibling.classList.toggle("select-hide");
-            this.classList.toggle("select-arrow-active");
-        });
-    }
-    function closeAllSelect(elmt) {
-        var y, y, i, xl, yl, arrNo = [];
-        x = document.getElementsByClassName("select-items");
-        y = document.getElementsByClassName("select-selected");
-        xl = x.length;
-        yl = y.length;
-        for (i = 0 ; i < yl ; i++) {
-            if (elmt == y[i]) {
-                arrNo.push(i);
-            }
-            else {
-                y[i].classList.remove("select-arrow-active");
-            }
-        }
-        for (i = 0 ; i < xl ; i++) {
-            if (arrNo.indexOf(i)) {
-                x[i].classList.add("select-hide");
-            }
-        }
-        document.addEventListener("click", closeAllSelect);
-    }
-}
-
 // CHAT BOX
-export function chatBox() {
+function chatBox() {
     document.getElementById('chat-box-btn').addEventListener('click', function() {
         this.classList.toggle('active');
         document.getElementById('chat-box').classList.toggle('active');
     });
 }
+chatBox();

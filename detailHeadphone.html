@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet"> 
+    <link rel="icon" href="./img/Logo/Icon.png" type="image/png" />
+    <script src="https://kit.fontawesome.com/0591fa8989.js" crossorigin="anonymous"></script>
+    <title>Chi tiết tai nghe W-Gear</title>
+</head>
+<body class="sale-page" onload="checkUser()">
+    <div class="main">
+        <header class="header">
+            <nav class="grid header__nav">
+                <div class="header__brand">
+                    <a href="index.html" class="header__logo">W<i class="header__logo-icon fa-solid fa-gamepad"></i>Gear</a>  
+                    <span>&copy;</span>
+                </div>
+                    
+                <div class="header__items">
+                    <ul>
+                        <li class="header__item"><a href="index.html">Trang chủ</a></li>
+                        <li class="header__item"><a href="keyboards.html"><i class="icon fas fa-keyboard"></i> Bàn phím</a>
+                            <div class="header__subitem">
+                                <ul>
+                                    <li><a href="keyboards.html">Bàn phím Akko</a></li>
+                                    <li><a href="keyboards.html">Bàn phím iKBC</a></li>
+                                    <li><a href="keyboards.html">Bàn phím DareU</a></li>
+                                    <li><a href="keyboards.html">Bàn phím FL-Esport</a></li>
+                                    <li><a href="keyboards.html">Bàn phím Leopold</a></li>
+                                    <li><a href="keyboards.html">Bàn phím Razer</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header__item"><a href="mouses.html"><i class="icon fa fa-mouse"></i> Chuột</a>
+                            <div class="header__subitem">
+                                <ul>
+                                    <li><a href="mouses.html">Chuột Logitech</a></li>
+                                    <li><a href="mouses.html">Chuột Steelseries</a></li>
+                                    <li><a href="mouses.html">Chuột Fuhlen</a></li>
+                                    <li><a href="mouses.html">Chuột Asus</a></li>
+                                    <li><a href="mouses.html">Chuột Razer</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header__item"><a href="headphones.html"><i class="icon fa fa-headphones"></i> Tai nghe</a>
+                            <div class="header__subitem">
+                                <ul>
+                                    <li><a href="headphones.html">Tai nghe HyperX</a></li>
+                                    <li><a href="headphones.html">Tai nghe Logitech</a></li>
+                                    <li><a href="headphones.html">Tai nghe DareU</a></li>
+                                    <li><a href="headphones.html">Tai nghe Rapoo</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- <li class="header__item"><a href="recruit.html"><i class="icon fa fa-briefcase"></i> Tuyển dụng</a></li> -->
+                        <li class="header__item"><a href="driver.html"><i class="icon fa-solid fa-download"></i> Driver</a></li>
+                    </ul>
+                </div>
+
+                <div class="header__search">
+                    <input type="text" class="input header__search--box" placeholder="Tìm kiếm sản phẩm">
+                    <a href="#" class="header__search--icon"><i class="icon search-icon fa fa-search"></i></a>
+                </div>
+
+                <div class="header__toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>  
+                
+                <div class="header__user"> 
+                    <div class="header__user--container">
+                        <div class="header__user-cart">
+                            <a href="cart.html" class="header__user-cart--link">
+                                <i class="icon fa-solid fa-basket-shopping"></i>
+                                <span class="header__user-cart--quality">5</span>
+                            </a>
+
+                            <!-- Empty: header__user-cart-list--empty -->
+                            <div class="header__user-cart-list">
+                                <img src="./img/Cart/cart-list-empty.jpg" alt="" class="header__user-cart-empty-img">
+
+                                <h4 class="header__cart-list--heading">Danh sách sản phẩm</h4>
+                                <ul class="header__cart-list-items">
+                                    <li class="header__cart-list-item">
+                                        <img src="./img/Produces/Keyboards/Akko/akko 3084 v2 ASA Blackpink.jpg" alt="Sản phẩm" class="header__cart-list-item-igm">
+
+                                        <div class="header__cart-list-item-info"> 
+                                            <div class="header__cart-list-item-name-box">
+                                                <a href="#" class="header__cart-list-item-name">Bàn phím cơ AKKO 3084 v2 ASA – Black Pink</a>
+                                            </div>
+                                            <span class="header__cart-list-item-price product-price-sale">1,690,000đ</span>
+                                            <div class="header__cart-list-item-detail">
+                                                <span class="header__cart-list-item-detail-heading">Số lượng:</span>
+                                                <span class="header__cart-list-item-quality">1</span>
+                                            </div>
+                                        </div>
+
+                                        <button class="btn btn--pri header__cart-list-item-remove">XÓA</button>
+                                    </li> 
+
+                                    <li class="header__cart-list-item">
+                                        <img src="./img/Produces/Mouses/Logitech/Logitech G304 Lightspeed Wireless White.jpg" alt="Sản phẩm" class="header__cart-list-item-igm">
+
+                                        <div class="header__cart-list-item-info"> 
+                                            <div class="header__cart-list-item-name-box">
+                                                <a href="#" class="header__cart-list-item-name">Chuột Logitech G304 Lightspeed Wireless White</a>
+                                            </div>
+                                            <span class="header__cart-list-item-price product-price-sale">849,000đ</span>
+                                            <div class="header__cart-list-item-detail">
+                                                <span class="header__cart-list-item-detail-heading">Số lượng:</span>
+                                                <span class="header__cart-list-item-quality">1</span>
+                                            </div>
+                                        </div>
+
+                                        <button class="btn btn--pri header__cart-list-item-remove">XÓA</button>
+                                    </li> 
+
+                                    <li class="header__cart-list-item">
+                                        <img src="./img/Produces/Keyboards/Leopold/Leopold FC650MDS Bluetooth Blue Grey.jpg" alt="Sản phẩm" class="header__cart-list-item-igm">
+
+                                        <div class="header__cart-list-item-info"> 
+                                            <div class="header__cart-list-item-name-box">
+                                                <a href="#" class="header__cart-list-item-name">Bàn phím Leopold FC650MDS Bluetooth Blue Grey</a>
+                                            </div>
+                                            <span class="header__cart-list-item-price product-price-sale">2,970,000đ</span>
+                                            <div class="header__cart-list-item-detail">
+                                                <span class="header__cart-list-item-detail-heading">Số lượng:</span>
+                                                <span class="header__cart-list-item-quality">2</span>
+                                            </div>
+                                        </div>
+
+                                        <button class="btn btn--pri header__cart-list-item-remove">XÓA</button>
+                                    </li> 
+
+                                    <li class="header__cart-list-item">
+                                        <img src="./img/Produces/Headphones/HyperX/HyperX Cloud Stinger Gaming Black.jpg" alt="Sản phẩm" class="header__cart-list-item-igm">
+
+                                        <div class="header__cart-list-item-info"> 
+                                            <div class="header__cart-list-item-name-box">
+                                                <a href="#" class="header__cart-list-item-name">Tai nghe HyperX Cloud Stinger Gaming Black</a>
+                                            </div>
+                                            <span class="header__cart-list-item-price product-price-sale">1,299,000đ</span>
+                                            <div class="header__cart-list-item-detail">
+                                                <span class="header__cart-list-item-detail-heading">Số lượng:</span>
+                                                <span class="header__cart-list-item-quality">1</span>
+                                            </div>
+                                        </div>
+
+                                        <button class="btn btn--pri header__cart-list-item-remove">XÓA</button>
+                                    </li> 
+
+                                    <li class="header__cart-list-item">
+                                        <img src="./img/Produces/Mouses/Asus/ASUS ROG Keris.jpg" alt="Sản phẩm" class="header__cart-list-item-igm">
+
+                                        <div class="header__cart-list-item-info"> 
+                                            <div class="header__cart-list-item-name-box">
+                                                <a href="#" class="header__cart-list-item-name">Chuột ASUS ROG Keris</a>
+                                            </div>
+                                            <span class="header__cart-list-item-price product-price-sale">1,250,000đ</span>
+                                            <div class="header__cart-list-item-detail">
+                                                <span class="header__cart-list-item-detail-heading">Số lượng:</span>
+                                                <span class="header__cart-list-item-quality">3</span>
+                                            </div>
+                                        </div>
+
+                                        <button class="btn btn--pri header__cart-list-item-remove">XÓA</button>
+                                    </li> 
+                                </ul>
+
+                                <div class="header__cart-list-see">
+                                    <a href="cart.html">
+                                        <button class="btn btn--pri header__cart-list-see-button">XEM GIỎ HÀNG</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="header__user--separate"></div>
+
+                        <div class="header__user-account">
+                            <a href="user.html" class="header__user-account--link"><i class="icon fa-solid fa-user"></i></a>
+
+                            <div class="header__user-account-info">
+                                <div class="sign-in"> 
+                                    <div class="header__user-account-img">
+                                        <img src="./img/Account/avatar.jpg.jpg" alt="" class="header__user-account-avatar">
+                                    </div>
+    
+                                    <span class="header__user-account-name">Nguyễn Minh Huy</span>
+    
+                                    <div class="header__user-account-info-details">
+                                        <div class="header__user-account-contact">
+                                            <span class="header__user-account-phone">Số điện thoại: 0938745593</span>
+                                        </div>
+                                        <div class="header__user-account-adress">
+                                            <span class="header__user-account-Email">Email: nguyenminhhuy.0938745593@gmail.com</span>
+                                        </div>
+                                    </div>
+    
+                                    <div class="header__user-account-button">
+                                        <a href="user.html">
+                                            <button class="btn btn--pri header__user-account-edit">CHỈNH SỬA</button>
+                                        </a>
+                                        <button class="btn btn--sec header__user-account-signout" onclick="signOut()">ĐĂNG XUẤT</button>
+                                    </div>
+                                </div>
+
+                                <div class="sign-out">
+                                    <h4 class="header__cart-list--heading">OOPS!!</h4>
+                                    <h4 class="header__cart-list--heading">BẠN CHƯA ĐĂNG NHẬP</h4>
+                                    <button class="btn btn--pri btn-sign-in" onclick="signIn1()">ĐĂNG NHẬP NGAY</button>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+              
+            </nav>
+        </header>
+
+        <div class="container"> 
+            <div class="grid detail-form__product Keyboards"> 
+                <div class="detail-form__product-heading">
+                    <!--Product image -->
+                    <div class="detail-form__product-img">
+                        <img src="./img/Produces/Headphones/HyperX/HyperX Cloud Stinger Gaming Black.jpg" alt="Sản phẩm">
+                    </div>
+
+                    <div class="detail-form__product-present">
+                        <div class="detail-form__product-name">
+                            <span>Tai nghe HyperX Cloud Stinger Gaming Black</span>
+                        </div>
+                        
+                        <div class="detail-form__product-prices">
+                            <span>Giá:</span>
+                            <span class="detail-form__product-price-normal product-price-sale">1,299,000đ</span>
+                            <span class="detail-form__product-price-normal"></span>
+                        </div>
+
+                        <div class="detail-form__product-rate">
+                            <span>Đánh giá:</span>
+                            <div class="detail-form__product-raing">
+                                <i class="icon-rated fa-solid fa-star"></i>
+                                <i class="icon-rated fa-solid fa-star"></i>
+                                <i class="icon-rated fa-solid fa-star"></i>
+                                <i class="icon-rated fa-solid fa-star"></i>
+                                <i class="icon-rated fa-solid fa-star"></i>
+                            </div>
+                        </div>
+
+                        <div class="detail-form__product-promotion">
+                            <span>Ưu đãi</span>
+                            <ul>
+                                <li>Giảm giá sốc khi mua cùng các sản phẩm khác</li>
+                                <li><b>Freeship</b> toàn quốc khiđặt hàng tại W-Gear</li>
+                                <li>Miễn phí vệ sinh laptop, bàn phím</li>
+                                <li>Bảo hành 24 tháng</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="detail-form__product-status stocking">
+                            <span>Tình trạng:</span>
+                            <span>Còn hàng</span>
+                        </div>
+
+                        <div class="detail-form__product-select">
+                            <label for="select">Chọn Switch:</label>
+                            <select name="select">
+                                <option value="1">Cherry MX Blue</option>
+                                <option value="2">Cherry MX Brown</option>
+                                <option value="3">Cherry MX Red</option>
+                            </select>
+                        </div>
+
+                        <div class="detail-form__product-quantity">
+                            <span>Số lượng:</span>
+                            <input type="number" min="0" name="" class="input" id="quantity-product">
+                        </div>
+
+                        <div class="detail-form__product-button">
+                            <button class="btn btn--sec detail-form__product-button-favourite">THÊM VÀO GIỎ</button>
+                            <button class="btn btn--pri detail-form__product-button-add-cart">MUA NGAY</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-form__product-body">
+                    <!-- Thông tin cấu hình -->
+                    <div class="detail-form__product-configuration">
+                        <div class="detail-form__product-configuration-heading">
+                            <h4>THÔNG SỐ KỸ THUẬT</h4>
+                        </div>
+                        <div class="detail-form__product-configuration-table">
+                            <table>
+                                <tr>
+                                    <td>Thương hiệu</td>
+                                    <td>HyperX</td>
+                                </tr>
+                                <tr>
+                                    <td>Series / Model</td>
+                                    <td>Cloud Stinger</td>
+                                </tr>
+                                <tr>
+                                    <td>Bảo hành</td>
+                                    <td>24 tháng</td>
+                                </tr>
+                                <tr>
+                                    <td>Kết nối</td>
+                                    <td>Có dây (Jack 3.5mm)</td>
+                                </tr>
+                                <tr>
+                                    <td>Màu sắc</td>
+                                    <td>Đen đỏ</td>
+                                </tr>
+                                <tr>
+                                    <td>Cân nặng</td>
+                                    <td>275 g</td>
+                                </tr> 
+                                <tr>
+                                    <td>Chất liệu đệm tai</td>
+                                    <td>Da</td>
+                                </tr>
+                                <tr>
+                                    <td>Chất liệu khung</td>
+                                    <td>Nhựa và kim loại</td>
+                                </tr>
+                                <tr>
+                                    <td>Dải tần số</td>
+                                    <td>18-23000 Hz</td>
+                                </tr>
+                                <tr>
+                                    <td>Micro</td>
+                                    <td>Khử nhiểu</td>
+                                </tr>
+                                <tr>
+                                    <td>Phụ kiện</td>
+                                    <td>1x Hướng dẫn sử dụng, 1x Dây chuyển đổi sang 2 jack 3.5mm</td>
+                                </tr>
+                                <tr> 
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Thông tin cấu hình -->
+                    <div class="detail-form__product-blog">
+                        <div class="detail-form__product-configuration-heading detail-form__product-blog-heading">
+                            <h4>ĐÁNH GIÁ CHI TIẾT</h4>
+                        </div>
+                        <div class="detail-form__product-blog-body">
+                            <h3>Một số đánh giá về tai nghe HyperX Cloud Stinger</h3>
+                            <p>
+                                Từ đó đến nay, qua các đời nâng cấp, cải tiến và đổi mới, từ HyperX Cloud Gaming, Kingston liên tục cho ra các sản phẩm tai nghe thuộc dòng Cloud Gaming như: Cloud 2 - Cloud Core - Cloud Revolver - Cloud X với những mức giá rất đáng cân nhắc khi đong đếm về chất lượng/giá cả so với các dòng tai nghe khác. Và gần đây nhất, Kingston với quyết tâm thể hiện giá trị của mình trên nhiều phân khúc sản phẩm, đã cho ra đời dòng tai nghe thuộc phân khúc Mid-end với một cái tên rất "kêu": Cloud Stinger.
+                            </p>
+                            <div class="detail-form__product-blog-img">
+                                <img src="./img/Produces/Headphones/HyperX/HyperX Cloud Stinger Gaming Black review.png" alt="">
+                            </div>
+
+                            <h3>Thiết Kế</h3>
+                            <p>
+                                Với một thiết kế nhỏ gọn hơn rất nhiều so với các dòng tai nghe đã ra đời trước đó của Kingston, với vóc dáng của phần bầu tai hơi tròn và cong, khi nhìn nghiêng giống một chiếc đuôi của con ong cùng ngòi chích, không tự nhiên mà chiếc tai nghe này được mang tên Stinger.
+                            </p>
+                            <div class="detail-form__product-blog-img">
+                                <img src="./img/Produces/Headphones/HyperX/HyperX Cloud Stinger Gaming Black style.png" alt="">
+                            </div>
+                            <p>
+                                Trọng lượng của cả chiếc tai nghe khá nhẹ : 275 gram, vì điều này, người sử dụng sẽ không cảm thấy nặng nề hay bị đau, mỏi đầu khi đeo lâu, cũng vì thế, chúng ta có thể thấy Kingston đang muốn hướng đến xu hướng giải trí/nghe nhạc di động với các dòng sản phẩm của họ.  
+                            </p>
+                            <br>
+                            <p>
+                                Hai phần bầu tai sẽ mỏng hơn và nhẹ hơn, đồng nghĩa với việc sẽ bớt "nóng" hơn khi sử dụng liên tục trong thời gian dài, cùng sự linh hoạt trong chuyển động của phần này sẽ ôm vừa lấy khoang tai của người dùng, hạn chế tạp âm xem kẽ vào nhưng sẽ không ôm quá chặt, tránh gây đau vành tai và bí tai.
+                            </p>
+                            <div class="detail-form__product-blog-img">
+                                <img src="./img/Produces/Headphones/HyperX/HyperX Cloud Stinger Gaming Black earcover.png" alt="">
+                            </div>
+                            
+                            <h3>Test và đánh giá nhanh khi sử dụng</h3>
+                            <p>
+                                Khi chơi game : Stinger rất tốt khi sử dụng khi chơi game, ngay khi đeo tai nghe vào, bạn thấy một sự "im lặng" và sẽ cần hơi nhấc tai nghe lên nếu muốn nghe âm thanh từ bên ngoài, sự im lặng này chính là điểm mà Stinger làm rất tốt : hạn chế tối đa tạp âm từ bên ngoài.
+                            </p>
+                            <div class="detail-form__product-blog-img">
+                                <img src="./img/Produces/Headphones/HyperX/HyperX Cloud Stinger Gaming Black.jpg" alt="">
+                            </div>
+                            <br>
+                            <p>
+                                Khi nghe nhạc : Âm thanh mà Stinger mang lại có thể nói là khá "phẳng", treble trong và cao, có nhiều đoạn hơi sắc, bass thì là một sự đối lập, bởi âm bass có lẽ không phải là một thế mạnh của Stinger. Sự "sắc" của treble thể hiện khá rõ khi điều chỉnh âm lượng lên mức cao nhất. Loại nhạc phù hợp với Stinger chắc chắn không phải nhạc dance hay các thể loại nhạc có nhiều bass tương tự.
+                            </p>
+                            <br>
+                            <p>
+                                Khi xem phim : Stinger sử dụng kết nối analog 3,5mm, vì vậy nếu bạn đòi hỏi gì nhiều hơn ví dụ như việc thưởng thức một bộ phim với âm thanh surround 7.1 chẳng hạn sẽ là điều không thể. Việc tái tạo âm thanh của Stinger đối với những bộ phim có thể chấm ở mức ổn.
+                            </p>
+                            <h3>Micorphone</h3>
+                            <p>
+                                Microphone: tuy là một dạng micro đơn hướng, nhưng microphone của Stinger có thể thu âm tốt ở tất cả các hướng xung quanh nó, chiếc mic này khá giống dạng microphone được sử dụng trong các cuộc hội nghị, nơi mà thiết bị thu âm sẽ được đặt ở giữa chiếc bàn mà mọi người ngồi xung quanh và chiếc mic cần phải làm tốt việc đó. Điều này có nghĩa là bạn sẽ không cần phải chuyển đổi dịch chuyển vị trí chiếc micro, tất cả sẽ đều được làm một cách tự động.
+                            </p>
+                            <div class="detail-form__product-blog-img">
+                                <img src="./img/Produces/Headphones/HyperX/HyperX Cloud Stinger Gaming Black micro.png" alt="">
+                            </div>
+
+                            <h3>Kết lại</h3>
+                            <p>
+                                Kết lại, đây là một chiếc tai nghe hoàn hảo cho những game thủ muốn một dòng tai nghe cao cấp hơn bình thường nhưng kinh tế chưa được dư dả để sử dụng. Người viết đánh giá rất cao Stinger, bởi với mức giá rẻ và chất lượng mà nó mang lại, có lẽ chúng ta không có gì cần phải phàn nàn. Rõ ràng rằng Kingston đang muốn thể hiện rằng họ tuy mới, nhưng đã và vẫn đang là một đối thủ rất nặng ký trên thị trường gaming gear nói chung hay tai nghe gaming giá rẻ nói riêng. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-form__product-footing">
+                    <div class="product-services-form">
+                        <div class="detail-form__product-configuration-heading product-services-form-heading">
+                            <h4>DỊCH VỤ KHÁCH HÀNG</h4>
+                        </div>
+                        <div class="product-services-box">
+                            <ul class="product-services">
+                                <li class="product-service">
+                                    <div class="product-service-items">
+                                        <i class="fa fa-headset"></i>
+                                        <span>TƯ VẤN SẢN PHẨM</span>
+                                    </div>
+                                </li>
+                                <li class="product-service">
+                                    <div class="product-service-items">
+                                        <i class="fa fa-money"></i>
+                                        <span>DỊCH VỤ TRẢ GÓP</span>
+                                    </div>
+                                </li>
+                                <li class="product-service">
+                                    <div class="product-service-items">
+                                        <i class="fa fa-gear"></i>
+                                        <span>DỊCH VỤ BẢO HÀNH</span>
+                                    </div>
+                                </li>
+                                <li class="product-service">
+                                    <div class="product-service-items">
+                                        <i class="fa fa-arrow-right-arrow-left"></i>
+                                        <span>DỊCH VỤ ĐỔI TRẢ</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <footer class="footer">
+            <div class="grid footer__container">
+                <ul>
+                    <li>
+                        <h3>Hệ thống cửa hàng</h3>
+                        <ul>
+                            <li>Địa chỉ 1: số 26, đường 57, ấp Chợ, xã Tân Phú Trung, Củ Chi, thành phố Hồ Chí Minh.</li>
+                            <li>Địa chỉ 2: 78-80-82 Hoàng Hoa Thám, Phường 12, Quận Tân Bình</li>
+                            <li>Địa chỉ 3: 1081 - 1083 Trần Hưng Đạo, Phường 5, Quận 5.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Dịch vụ và chính sách</h3>
+                        <ul>
+                            <li>Tư vấn mua hàng: 0938745593</li>
+                            <li>Hỗ trợ khách hàng: 01267105904</li>
+                            <li><a href="#">Chính sách đổi trả</a></li>
+                            <li><a href="#">Chính sách bảo hành</a></li>
+                            <li><a href="#">Chính sách mua hàng</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Mạng xã hội</h3>
+                        <ul>
+                            <li><i class="fa-brands fa-facebook-square"></i></li>
+                            <li><i class="fa-brands fa-instagram-square"></i></li>
+                            <li><i class="fa-brands fa-youtube-square"></i></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal__overlay" onclick="quitModal()"></div>
+
+        <div class="modal__body">
+             <!--Sign up form  -->
+            <div class="auth-form auth-form__signup" id="sign-up">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">ĐĂNG KÝ</h3>
+                        <span class="auth-form__switch-btn auth-form__switch-btn-signin" onclick="switchToSignIn()">ĐĂNG NHẬP</span>
+                    </div>
+                        
+                    <div class="auth-form__form">
+                        <div class="auth-form__group" style="position: relative;">
+                            <input type="text" class="input auth-form__input" placeholder="Email hoặc số điện thoại">
+                            <span style="font-size: 25px; color: #e74c3c; position: absolute; top: 35%; right: -15px; cursor: default;">*</span>
+                        </div>
+                        <div class="auth-form__group" style="position: relative;">
+                            <input type="text" class="input auth-form__input" placeholder="Tên đăng nhập">
+                            <span style="font-size: 25px; color: #e74c3c; position: absolute; top: 35%; right: -15px; cursor: default;">*</span>
+                        </div>
+                        <div class="auth-form__group" style="position: relative;">
+                            <input type="password" class="input auth-form__input" placeholder="Mật khẩu">
+                            <span style="font-size: 25px; color: #e74c3c; position: absolute; top: 35%; right: -15px; cursor: default;">*</span>
+                        </div>
+                        <div class="auth-form__group" style="position: relative;">
+                            <input type="password" class="input auth-form__input" placeholder="Nhập lại mật khẩu">
+                            <span style="font-size: 25px; color: #e74c3c; position: absolute; top: 35%; right: -15px; cursor: default;">*</span>
+                        </div>
+                    </div>
+                    
+                    <div class="auth-form__others">
+                        <span>Hoặc đăng ký bằng</span>
+                        <div class="auth-form__other">
+                            <a href="#"><i class="icon fa-brands fa-facebook-square"></i></a>
+                            <a href="#"><i class="icon fa-brands fa-twitter-square"></i></a>
+                            <a href="#"><i class="icon fa-brands fa-instagram-square"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="auth-form__controls">
+                        <button class="btn btn--sec btn__quit" onclick="quitModal()">TRỞ LẠI</button>
+                        <button class="btn btn--pri">ĐĂNG KÝ</button>
+                    </div>
+                </div>
+            </div> 
+
+            <!-- Sign in form -->
+            <div class="auth-form auth-form__signin" id="sign-in">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">ĐĂNG NHẬP</h3>
+                        <span class="auth-form__switch-btn auth-form__switch-btn-signup" onclick="switchToSignUp()">ĐĂNG KÝ</span>
+                    </div>
+                        
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" class="input auth-form__input" placeholder="Tên đăng nhập, email hoặc số điện thoại">
+                        </div> 
+                        <div class="auth-form__group">
+                            <input type="password" class="input auth-form__input" placeholder="Mật khẩu">
+                        </div> 
+                    </div>
+
+                    <div class="auth-form__aside">
+                        <div class="auth-form__links">
+                            <span>Bạn quên mật khẩu?</span>
+                            <a href="" class="auth-form__link"> Khôi phục ngay!</a>
+                        </div>
+                    </div>
+
+                    <div class="auth-form__others">
+                        <span>Hoặc đăng nhập bằng</span>
+                        <div class="auth-form__other">
+                            <a href="#"><i class="icon fa-brands fa-facebook-square"></i></a>
+                            <a href="#"><i class="icon fa-brands fa-twitter-square"></i></a>
+                            <a href="#"><i class="icon fa-brands fa-instagram-square"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="auth-form__controls">
+                        <button class="btn btn--sec btn__quit" onclick="quitModal()">TRỞ LẠI</button>
+                        <button class="btn btn--pri btn__login_web" onclick="signIn2()">ĐĂNG NHẬP</button>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
